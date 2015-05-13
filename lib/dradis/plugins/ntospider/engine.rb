@@ -3,7 +3,7 @@ module Dradis::Plugins::NTOSpider
     isolate_namespace Dradis::Plugins::NTOSpider
 
     include ::Dradis::Plugins::Base
-    description 'Processes Acunetix XML format'
+    description 'Processes NTOSpider reports'
     provides :upload
   end
 end

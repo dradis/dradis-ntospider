@@ -4,8 +4,8 @@ module Dradis
       # This is required while we transition the Upload Manager to use
       # Dradis::Plugins only
       module Meta
-        NAME = "NTOSpider XML upload plugin"
-        EXPECTS = "NTOSpider XML format."
+        NAME = "NTOSpider report upload plugin"
+        EXPECTS = "NTOSpider report."
         module VERSION
           include Dradis::Plugins::NTOSpider::VERSION
         end

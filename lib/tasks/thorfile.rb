@@ -3,7 +3,7 @@ module Dradis
     module NTOSpider
 
       class Thor < Thor
-include Core::Pro::ProjectScopedTask
+        include Core::Pro::ProjectScopedTask
         namespace "dradis:plugins:ntospider"
 
         desc "upload FILE", "upload NTOSpider XML results"
@@ -18,7 +18,7 @@ include Core::Pro::ProjectScopedTask
             exit -1
           end
 
-detect_and_set_project_scope
+          detect_and_set_project_scope
 
           content_service = nil
           template_service = nil
@@ -31,8 +31,8 @@ detect_and_set_project_scope
           end
 
           importer = Dradis::Plugins::NTOSpider::Importer.new(
-                      logger: logger,
-             content_service: content_service,
+            logger: logger,
+            content_service: content_service,
             template_service: template_service
           )
 
