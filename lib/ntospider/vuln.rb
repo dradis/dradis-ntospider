@@ -1,12 +1,13 @@
 module NTOSpider
-  # This class represents each of the findings in the NTOSpider report.
+  # This class represents each of the vulnerabilities reported in the
+  # NTOSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
   #
   # It provides a convenient way to access the information scattered all over
-  # the XML files.
+  # the XML entities.
   #
   # Instead of providing separate methods for each supported property we rely
   # on Ruby's #method_missing to do most of the work.
-  class Issue
+  class Vuln
     # Accepts an XML node from Nokogiri::XML.
     def initialize(xml_node)
       @xml = xml_node

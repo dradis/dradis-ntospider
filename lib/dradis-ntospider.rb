@@ -5,4 +5,4 @@ require 'dradis-plugins'
 require 'dradis/plugins/ntospider'
 
 # load supporting NTOSpider classes
-require 'ntospider'
+require 'ntospider/vuln'

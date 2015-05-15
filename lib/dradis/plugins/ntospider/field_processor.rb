@@ -2,7 +2,7 @@ module Dradis::Plugins::NTOSpider
   class FieldProcessor < Dradis::Plugins::Upload::FieldProcessor
 
     def post_initialize(args={})
-      @ntospider_object = ::NTOSpider::Issue.new(data)
+      @nto_object = ::NTOSpider::Vuln.new(data)
     end
 
     def value(args={})
@@ -12,7 +12,7 @@ module Dradis::Plugins::NTOSpider
       # is common across all fields for a given template (and meaningless).
       _, name = field.split('.')
 
-      @ntospider_object.try(name) || 'n/a'
+      @nto_object.try(name) || 'n/a'
     end
   end
 
