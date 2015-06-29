@@ -12,6 +12,9 @@ module Dradis::Plugins::NTOSpider
       # is common across all fields for a given template (and meaningless).
       _, name = field.split('.')
 
+      # The XML uses a <Method> entity, but 'method' is a reserved word here so:
+      name = 'vuln_method' if name == 'method'
+
       @nto_object.try(name) || 'n/a'
     end
   end

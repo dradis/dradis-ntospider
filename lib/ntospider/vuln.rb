@@ -8,6 +8,7 @@ module NTOSpider
   # Instead of providing separate methods for each supported property we rely
   # on Ruby's #method_missing to do most of the work.
   class Vuln
+    attr_accessor :xml
     # Accepts an XML node from Nokogiri::XML.
     def initialize(xml_node)
       @xml = xml_node
@@ -20,10 +21,13 @@ module NTOSpider
         # attributes
 
         # simple tags
-
+        :attack_class, :attack_score, :attack_type, :attack_value, :capec,
+        :cwe_id, :description, :dissa_asc, :normalized_url, :oval, :owasp2007,
+        :owasp2010, :owasp2013, :recommendation, :vuln_method, :vuln_param,
+        :vuln_type, :vuln_url, :web_site
         # nested tags
       ]
-    end
+end
 
     # This allows external callers (and specs) to check for implemented
     # properties
@@ -39,7 +43,6 @@ module NTOSpider
     # attribute, simple descendent or collection that it maps to in the XML
     # tree.
     def method_missing(method, *args)
-
       # We could remove this check and return nil for any non-recognized tag.
       # The problem would be that it would make tricky to debug problems with
       # typos. For instance: <>.potr would return nil instead of raising an
@@ -52,16 +55,22 @@ module NTOSpider
       # First we try the attributes. In Ruby we use snake_case, but in XML
       # CamelCase is used for some attributes
       translations_table = {
-
+        capec:     'CAPEC',
+        dissa_asc: 'DISSA_ASC',
+        owasp2007: 'OWASP2007',
+        owasp2010: 'OWASP2010',
+        owasp2013: 'OWASP2013',
+        oval:      'OVAL',
+        wasc:      'WASC'
       }
 
-      method_name = translations_table.fetch(method, method.to_s)
+      method_name = translations_table.fetch(method, method.to_s.camelcase)
 
       # no attributes in the <issue> node
       # return @xml.attributes[method_name].value if @xml.attributes.key?(method_name)
 
       # Then we try simple children tags: name, type, ...
-      tag = @xml.xpath("./#{method_name}").first
+      tag = @xml.at_xpath("./#{method_name}")
       if tag && !tag.text.blank?
         if tags_with_html_content.include?(method)
           return cleanup_html(tag.text)
@@ -69,7 +78,7 @@ module NTOSpider
           return tag.text
         end
       else
-        # nothing found, the tag is valid but not present in this ReportItem
+        # nothing found, the tag is valid but not present in this Vuln
         return nil
       end
     end
@@ -89,7 +98,7 @@ module NTOSpider
       result.gsub!(/<font.*?>(.*?)<\/font>/m, '\1')
       result.gsub!(/<h2>(.*?)<\/h2>/, '*\1*')
       result.gsub!(/<i>(.*?)<\/i>/, '\1')
-      result.gsub!(/<p>(.*?)<\/p>/, '\1')
+      result.gsub!(/<p>(.*?)<\/p>/m, '\1')
       result.gsub!(/<pre.*?>(.*?)<\/pre>/m){|m| "\n\nbc.. #{ $1 }\n\np.  \n" }
 
       result.gsub!(/<ul>/, "\n")
@@ -102,7 +111,7 @@ module NTOSpider
 
     # Some of the values have embedded HTML content that we need to strip
     def tags_with_html_content
-      []
+      [:description, :recommendation]
     end
 
   end
