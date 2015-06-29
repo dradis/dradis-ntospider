@@ -24,7 +24,6 @@ module Dradis::Plugins::NTOSpider
       @doc = Nokogiri::XML( file_content )
       logger.info{'Done.'}
 
-      host_node = content_service.create_node(label: @doc.at_xpath('/VulnSummary/ScanName').text, type: :host)
 
       if @doc.xpath('/VulnSummary/VulnList/Vuln').empty?
         logger.fatal{ NO_VULNS_ERROR_MESSAGE }
@@ -34,6 +33,11 @@ module Dradis::Plugins::NTOSpider
 
       @doc.xpath('/VulnSummary/VulnList/Vuln').each do |xml_vuln|
         vuln = ::NTOSpider::Vuln.new(xml_vuln)
+
+        host_node_label = xml_vuln.at_xpath('./WebSite').text
+        host_node_label = URI.parse(host_node_label).host rescue host_node_label
+        host_node = content_service.create_node(label: host_node_label, type: :host)
+
         plugin_id = vuln.vuln_type
         logger.info{ "\t\t => Creating new issue (plugin_id: #{plugin_id})" }
         issue_text = template_service.process_template(
@@ -43,7 +47,7 @@ module Dradis::Plugins::NTOSpider
 
         logger.info{ "\t\t => Creating new evidence" }
         evidence_content = template_service.process_template(
-          template: 'evidence', data: xml_vuln
+          template: 'evidence', data: vuln.xml
         )
         content_service.create_evidence(
           issue: issue, node: host_node, content: evidence_content
