@@ -19,8 +19,7 @@ module Dradis::Plugins::NTOSpider
 
       filename = File.basename(file)
       unless filename == "VulnerabilitiesSummary.xml"
-        logger.fatal{ BAD_FILENAME_ERROR_MESSAGE }
-        content_service.create_note text: BAD_FILENAME_ERROR_MESSAGE
+        log_error_and_return(BAD_FILENAME_ERROR_MESSAGE)
         return false
       end
 
@@ -30,15 +29,13 @@ module Dradis::Plugins::NTOSpider
       if @doc.root && @doc.root.name == 'VulnSummary'
         logger.info{'Done.'}
       else
-        logger.fatal { NO_VULNSUMMARY_ERROR_MESSAGE }
-        content_service.create_note text: NO_VULNSUMMARY_ERROR_MESSAGE
+        log_error_and_return(NO_VULNSUMMARY_ERROR_MESSAGE)
         return false
       end
 
 
       if @doc.xpath('/VulnSummary/VulnList/Vuln').empty?
-        logger.fatal{ NO_VULNS_ERROR_MESSAGE }
-        content_service.create_note text: NO_VULNS_ERROR_MESSAGE
+        log_error_and_return(NO_VULNS_ERROR_MESSAGE)
         return false
       end
 
@@ -67,5 +64,11 @@ module Dradis::Plugins::NTOSpider
 
       true
     end # /import
+
+    private
+    def log_error_and_return(message)
+      logger.fatal { message }
+      content_service.create_note text: "#[Title]#\nNTO upload error\n\n#[Description]#\n#{ message }"
+    end
   end
 end
