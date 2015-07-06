@@ -3,15 +3,15 @@ class NTOSpiderTasks < Thor
 
   namespace "dradis:plugins:ntospider"
 
-  desc "upload REPORT_PATH", "upload NTOSpider XML results"
-  def upload(report_path)
+  desc "upload FILE", "upload NTOSpider XML results"
+  def upload(file_path)
     require 'config/environment'
 
     logger = Logger.new(STDOUT)
     logger.level = Logger::DEBUG
 
-    unless File.exists?(report_path)
-      $stderr.puts "** the file [#{report_path}] does not exist"
+    unless File.exists?(file_path)
+      $stderr.puts "** the file [#{file_path}] does not exist"
       exit -1
     end
 
@@ -27,12 +27,12 @@ class NTOSpiderTasks < Thor
     end
 
     importer = Dradis::Plugins::NTOSpider::Importer.new(
-      logger: logger,
-      content_service: content_service,
+                logger: logger,
+       content_service: content_service,
       template_service: template_service
     )
 
-    importer.import(path: report_path)
+    importer.import(file: file_path)
 
     logger.close
   end

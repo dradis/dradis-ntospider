@@ -1,33 +1,44 @@
 module Dradis::Plugins::NTOSpider
   class Importer < Dradis::Plugins::Upload::Importer
 
+    BAD_FILENAME_ERROR_MESSAGE = \
+      "The uploaded file should be named VulnerabilitiesSummary.xml. "\
+      "You'll find VulnerabilitiesSummary.xml inside the /report subdirectory in NTO Spider's output."
+    NO_VULNSUMMARY_ERROR_MESSAGE = \
+      "A proper root element (/VulnSummary) wasn't detected in the uploaded file. "\
+      "Ensure the file you uploaded comes from a NTOSpider report."
     NO_VULNS_ERROR_MESSAGE = \
       "No vulnerabilities were detected in the uploaded file (/VulnSummary/VulnList/Vuln). "\
-      "Ensure you uploaded a NTOSpider report."
+      "Ensure the file you uploaded comes from a NTOSpider report."
 
     # The framework will call this function if the user selects this plugin from
     # the dropdown list and uploads a file.
     # @returns true if the operation was successful, false otherwise
     def import(params={})
-      path = params.fetch(:path)
+      file = params.fetch(:file)
 
-      logger.info{'Locating VulnerabilitiesSummary.xml in NTOSpider report files...'}
-      begin
-        file_content = File.read(File.join(path, "VulnerabilitiesSummary.xml"))
-      rescue
-        logger.fatal{ "Couldn't find VulnerabilitiesSummary.xml in #{ path }" }
+      filename = File.basename(file)
+      unless filename == "VulnerabilitiesSummary.xml"
+        logger.fatal{ BAD_FILENAME_ERROR_MESSAGE }
+        content_service.create_note text: BAD_FILENAME_ERROR_MESSAGE
         return false
       end
-      logger.info{'Done.'}
 
+      file_content = File.read(file)
       logger.info{'Parsing VulnerabilitiesSummary.xml...'}
       @doc = Nokogiri::XML( file_content )
-      logger.info{'Done.'}
+      if @doc.root && @doc.root.name == 'VulnSummary'
+        logger.info{'Done.'}
+      else
+        logger.fatal { NO_VULNSUMMARY_ERROR_MESSAGE }
+        content_service.create_note text: NO_VULNSUMMARY_ERROR_MESSAGE
+        return false
+      end
 
 
       if @doc.xpath('/VulnSummary/VulnList/Vuln').empty?
         logger.fatal{ NO_VULNS_ERROR_MESSAGE }
-        content_service.create_note text: NO_VULNS_ERROR_MESSAGE, node: host_node
+        content_service.create_note text: NO_VULNS_ERROR_MESSAGE
         return false
       end
 
