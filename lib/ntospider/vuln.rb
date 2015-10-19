@@ -27,7 +27,7 @@ module NTOSpider
         :vuln_type, :vuln_url, :web_site
         # nested tags
       ]
-end
+    end
 
     # This allows external callers (and specs) to check for implemented
     # properties
