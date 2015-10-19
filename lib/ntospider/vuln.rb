@@ -93,18 +93,15 @@ module NTOSpider
       result.gsub!(/&gt;/, '>')
 
       result.gsub!(/<b>(.*?)<\/b>/, '*\1*')
-      result.gsub!(/<br\/>/, "\n")
-      result.gsub!(/<br>/, "\n")
+      result.gsub!(/<br\/?>/, "\n")
       result.gsub!(/<font.*?>(.*?)<\/font>/m, '\1')
       result.gsub!(/<h2>(.*?)<\/h2>/, '*\1*')
       result.gsub!(/<i>(.*?)<\/i>/, '\1')
       result.gsub!(/<p>(.*?)<\/p>/m, '\1')
       result.gsub!(/<pre.*?>(.*?)<\/pre>/m){|m| "\n\nbc.. #{ $1 }\n\np.  \n" }
 
-      result.gsub!(/<ul>/, "\n")
-      result.gsub!(/<\/ul>/, "\n")
-      result.gsub!(/<li>/, "\n* ")
-      result.gsub!(/<\/li>/, "\n")
+      result.gsub!(/<\/?ul>/, "\n")
+      result.gsub!(/<\/?li>/, "\n")
 
       result
     end
