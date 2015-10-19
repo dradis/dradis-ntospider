@@ -19,6 +19,7 @@ module NTOSpider
     def supported_tags
       [
         # attributes
+        :crawl_traffic, :crawl_traffic_template, :crawl_traffic_response,
 
         # simple tags
         :attack_class, :attack_score, :attack_type, :attack_value, :capec,
@@ -52,34 +53,18 @@ module NTOSpider
         return
       end
 
-      # First we try the attributes. In Ruby we use snake_case, but in XML
-      # CamelCase is used for some attributes
-      translations_table = {
-        capec:     'CAPEC',
-        dissa_asc: 'DISSA_ASC',
-        owasp2007: 'OWASP2007',
-        owasp2010: 'OWASP2010',
-        owasp2013: 'OWASP2013',
-        oval:      'OVAL',
-        wasc:      'WASC'
-      }
-
-      method_name = translations_table.fetch(method, method.to_s.camelcase)
-
-      # no attributes in the <issue> node
-      # return @xml.attributes[method_name].value if @xml.attributes.key?(method_name)
-
-      # Then we try simple children tags: name, type, ...
+      method_name = TRANSLATIONS_TABLE.fetch(method, method.to_s.camelcase)
       tag = @xml.at_xpath("./#{method_name}")
-      if tag && !tag.text.blank?
-        if tags_with_html_content.include?(method)
-          return cleanup_html(tag.text)
-        else
-          return tag.text
-        end
+
+      # If tag is valid but not present in this Vuln, return nothing:
+      return nil unless tag && tag.text.present?
+
+      if TAGS_WITH_HTML_CONTENT.include?(method)
+        cleanup_html(tag.text)
+      elsif BASE_64_ENCODED_TAGS.include?(method)
+        Base64.decode64(tag.text)
       else
-        # nothing found, the tag is valid but not present in this Vuln
-        return nil
+        tag.text
       end
     end
 
@@ -106,10 +91,24 @@ module NTOSpider
       result
     end
 
+    # In Ruby we use snake_case; in XML CamelCase is used for some attributes:
+    TRANSLATIONS_TABLE = {
+      capec:     'CAPEC',
+      dissa_asc: 'DISSA_ASC',
+      owasp2007: 'OWASP2007',
+      owasp2010: 'OWASP2010',
+      owasp2013: 'OWASP2013',
+      oval:      'OVAL',
+      wasc:      'WASC'
+    }
+
     # Some of the values have embedded HTML content that we need to strip
-    def tags_with_html_content
-      [:description, :recommendation]
-    end
+    TAGS_WITH_HTML_CONTENT = [:description, :recommendation]
+
+    # Tags whose value in the XML is base-64 encoded:
+    BASE_64_ENCODED_TAGS = [
+      :crawl_traffic, :crawl_traffic_template, :crawl_traffic_response
+    ]
 
   end
 end

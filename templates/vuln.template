@@ -42,3 +42,12 @@
 
 #[OVAL]#
 %vuln.oval%
+
+#[Crawl Traffic]#
+%vuln.crawl_traffic%
+
+#[Crawl Traffic Template]#
+%vuln.crawl_traffic_template%
+
+#[Crawl Traffic Response]#
+%vuln.crawl_traffic_response%
