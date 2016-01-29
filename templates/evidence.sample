@@ -1,0 +1,13 @@
+<Vuln>
+<DbId>7B9CAABF300A49688F4D30FA423EDFB8</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<ScanName>hackthissite</ScanName>
+<WebSite>http://www.hackthissite.org:80</WebSite>
+<VulnType>Reflected Cross-site scripting (XSS)</VulnType>
+<VulnUrl>http://www.hackthissite.org/</VulnUrl>
+<NormalizedUrl>http://www.hackthissite.org/?</NormalizedUrl>
+<MatchedString></MatchedString>
+<NormalizedPostParams></NormalizedPostParams>
+<VulnParam>Unnamed</VulnParam>
+<ParameterName>Unnamed</ParameterName>
+</Vuln>
