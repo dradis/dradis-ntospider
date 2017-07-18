@@ -14,7 +14,7 @@ class NTOSpiderTasks < Thor
 
     detect_and_set_project_scope
 
-    importer = Dradis::Plugins::NTOSpider::Importer.new(logger: logger)
+    importer = Dradis::Plugins::NTOSpider::Importer.new(task_options)
     importer.import(file: file_path)
   end
 end
