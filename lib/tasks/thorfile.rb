@@ -7,9 +7,6 @@ class NTOSpiderTasks < Thor
   def upload(file_path)
     require 'config/environment'
 
-    logger = Logger.new(STDOUT)
-    logger.level = Logger::DEBUG
-
     unless File.exists?(file_path)
       $stderr.puts "** the file [#{file_path}] does not exist"
       exit -1
@@ -19,7 +16,5 @@ class NTOSpiderTasks < Thor
 
     importer = Dradis::Plugins::NTOSpider::Importer.new(logger: logger)
     importer.import(file: file_path)
-
-    logger.close
   end
 end
