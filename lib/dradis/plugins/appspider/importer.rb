@@ -1,15 +1,15 @@
-module Dradis::Plugins::NTOSpider
+module Dradis::Plugins::APPSpider
   class Importer < Dradis::Plugins::Upload::Importer
 
     BAD_FILENAME_ERROR_MESSAGE = \
       "The uploaded file should be named VulnerabilitiesSummary.xml. "\
-      "You'll find VulnerabilitiesSummary.xml inside the /report subdirectory in NTO Spider's output."
+      "You'll find VulnerabilitiesSummary.xml inside the /report subdirectory in App Spider's output."
     NO_VULNSUMMARY_ERROR_MESSAGE = \
       "A proper root element (/VulnSummary) wasn't detected in the uploaded file. "\
-      "Ensure the file you uploaded comes from a NTOSpider report."
+      "Ensure the file you uploaded comes from a APPSpider report."
     NO_VULNS_ERROR_MESSAGE = \
       "No vulnerabilities were detected in the uploaded file (/VulnSummary/VulnList/Vuln). "\
-      "Ensure the file you uploaded comes from a NTOSpider report."
+      "Ensure the file you uploaded comes from a AppSpider report."
 
     # The framework will call this function if the user selects this plugin from
     # the dropdown list and uploads a file.
@@ -40,7 +40,7 @@ module Dradis::Plugins::NTOSpider
       end
 
       @doc.xpath('/VulnSummary/VulnList/Vuln').each do |xml_vuln|
-        vuln = ::NTOSpider::Vuln.new(xml_vuln)
+        vuln = ::APPSpider::Vuln.new(xml_vuln)
 
         host_node_label = xml_vuln.at_xpath('./WebSite').text
         host_node_label = URI.parse(host_node_label).host rescue host_node_label
@@ -52,14 +52,16 @@ module Dradis::Plugins::NTOSpider
           template: 'vuln', data: vuln.xml
         )
         issue = content_service.create_issue text: issue_text, id: plugin_id
-
-        logger.info{ "\t\t => Creating new evidence" }
-        evidence_content = template_service.process_template(
-          template: 'evidence', data: vuln.xml
-        )
-        content_service.create_evidence(
-          issue: issue, node: host_node, content: evidence_content
-        )
+        
+        xml_vuln.xpath('./AttackList/Attack').each do |attack_xml|
+          logger.info{ "\t\t => Creating new evidence" }
+          evidence_content = template_service.process_template(
+            template: 'evidence', data: attack_xml
+          )
+          content_service.create_evidence(
+            issue: issue, node: host_node, content: evidence_content
+          )
+        end
       end
 
       true
@@ -68,7 +70,7 @@ module Dradis::Plugins::NTOSpider
     private
     def log_error_and_return(message)
       logger.fatal { message }
-      content_service.create_note text: "#[Title]#\nNTO upload error\n\n#[Description]#\n#{ message }"
+      content_service.create_note text: "#[Title]#\nAppSpider upload error\n\n#[Description]#\n#{ message }"
     end
   end
 end

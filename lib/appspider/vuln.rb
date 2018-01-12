@@ -1,6 +1,6 @@
-module NTOSpider
+module APPSpider
   # This class represents each of the vulnerabilities reported in the
-  # NTOSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
+  # APPSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
   #
   # It provides a convenient way to access the information scattered all over
   # the XML entities.
@@ -24,8 +24,10 @@ module NTOSpider
         :attack_class, :attack_score, :attack_type, :attack_value, :capec,
         :cwe_id, :description, :dissa_asc, :normalized_url, :oval, :owasp2007,
         :owasp2010, :owasp2013, :recommendation, :vuln_method, :vuln_param,
-        :vuln_type, :vuln_url, :web_site
+        :vuln_type, :vuln_url, :web_site,
         # nested tags
+        :attack_value, :attack_vuln_url, :attack_post_params, :attack_matched_string,
+        :attack_request, :attack_response
       ]
 end
 
@@ -61,7 +63,13 @@ end
         owasp2010: 'OWASP2010',
         owasp2013: 'OWASP2013',
         oval:      'OVAL',
-        wasc:      'WASC'
+        wasc:      'WASC',
+        attack_value:          'AttackValue',
+        attack_vuln_url:       'AttackVulnUrl', 
+        attack_post_params:    'AttackPostParams', 
+        attack_matched_string: 'AttackMatchedString',
+        attack_request:        'AttackRequest/Request', 
+        attack_response:       'AttackRequest/Response'
       }
 
       method_name = translations_table.fetch(method, method.to_s.camelcase)
