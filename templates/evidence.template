@@ -9,3 +9,21 @@
 
 #[Param]#
 %evidence.vuln_param%
+
+#[attackvalue]#
+%evidence.attack_value%
+
+#[attackvulnurl]#
+%evidence.attack_vuln_url%
+
+#[attackpostparams]#
+%evidence.attack_post_params%
+
+#[attackmatched_tring]#
+%evidence.attack_matched_string%
+
+#[attackrequest]#
+%evidence.attack_request%
+
+#[attackresponse]#
+%evidence.attack_response%

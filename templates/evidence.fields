@@ -2,3 +2,9 @@ evidence.web_site
 evidence.vuln_url
 evidence.normalized_url
 evidence.vuln_param
+evidence.attack_value
+evidence.attack_vuln_url
+evidence.attack_post_params
+evidence.attack_matched_string
+evidence.attack_request
+evidence.attack_response

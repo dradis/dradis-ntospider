@@ -2,6 +2,7 @@
 Gemfile.lock
 /.bundle/
 /vendor/bundle/
+/.DS_Store/
 
 # Gem artifacts
 /pkg/

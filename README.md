@@ -1,8 +1,11 @@
-# NTO Spider add-on for Dradis
+# APP Spider add-on for Dradis
 
-[![Build Status](https://secure.travis-ci.org/dradis/dradis-ntospider.png?branch=master)](http://travis-ci.org/dradis/dradis-ntospider) [![Code Climate](https://codeclimate.com/github/dradis/dradis-ntospider.png)](https://codeclimate.com/github/dradis/dradis-ntospider.png)
+[![Build Status](https://secure.travis-ci.org/dradis/dradis-appspider.png?branch=master)](http://travis-ci.org/dradis/dradis-appspider) [![Code Climate](https://codeclimate.com/github/dradis/dradis-appspider.png)](https://codeclimate.com/github/dradis/dradis-appspider.png)
 
-The NTO Spider add-on enables users to upload NTO Spider XML files to create a structure of nodes/notes that contain the same information about the hosts/ports/services as the original file.
+If you're looking for the updated plugin, look at dradis-appspider.
+This remains only to assist in the conversion.
+
+The APP Spider add-on enables users to upload APP Spider XML files to create a structure of nodes/notes that contain the same information about the hosts/ports/services as the original file.
 
 The add-on requires [Dradis CE](https://dradisframework.org/) > 3.0, or [Dradis Pro](https://dradisframework.com/pro/).
 
