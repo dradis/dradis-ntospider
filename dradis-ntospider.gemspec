@@ -12,9 +12,9 @@ Gem::Specification.new do |spec|
   spec.description = 'This add-on allows you to upload and parse output produced from the APPSpider Web Vulnerability Scanner (Rapid 7) into Dradis.'
 
   spec.license = 'GPL-2'
-
-  spec.authors = ['Michael Gargiullo']
-  spec.email = ['michael.gargiullo@pivotpointsecurity.com']
+  
+  spec.authors = ['Daniel Martin','Michael Gargiullo']
+  spec.email = ['etd@nomejortu.com','michael.gargiullo@pivotpointsecurity.com']
   spec.homepage = 'http://dradisframework.org'
 
   spec.files = `git ls-files`.split($\)
