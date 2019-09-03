@@ -1,6 +1,6 @@
 module Dradis
   module Plugins
-    module NTOSpider
+    module Appspider
       # Returns the version of the currently loaded NTOSpider as a <tt>Gem::Version</tt>
       def self.gem_version
         Gem::Version.new VERSION::STRING
@@ -9,7 +9,7 @@ module Dradis
       module VERSION
         MAJOR = 3
         MINOR = 14
-        TINY = 0
+        TINY = 1
         PRE = nil
 
         STRING = [MAJOR, MINOR, TINY, PRE].compact.join(".")

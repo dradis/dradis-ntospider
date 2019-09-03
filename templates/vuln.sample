@@ -1,200 +1,137 @@
 <Vuln>
-<DbId>7B9CAABF300A49688F4D30FA423EDFB8</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<ScanName>hackthissite</ScanName>
-<WebSite>http://www.hackthissite.org:80</WebSite>
-<VulnType>Reflected Cross-site scripting (XSS)</VulnType>
-<VulnUrl>http://www.hackthissite.org/</VulnUrl>
-<NormalizedUrl>http://www.hackthissite.org/?</NormalizedUrl>
-<MatchedString></MatchedString>
-<NormalizedPostParams></NormalizedPostParams>
-<VulnParam>Unnamed</VulnParam>
-<ParameterName>Unnamed</ParameterName>
-<HtmlEntityAttacked>Query-Parameters</HtmlEntityAttacked>
-<AttackType>javascript after single quote</AttackType>
-<AttackScore>3-Medium</AttackScore>
-<AttackValue>';alert('x9lj3cup');//</AttackValue>
-<Method>GET</Method>
-<RootCauseId>9AEE038BB3477FE5A178FBA57C93FC76</RootCauseId>
-<Description><![CDATA[<p>Reflected Cross-site Scripting (XSS) is another name for non-persistent XSS, where the attack doesn't load with the vulnerable web application but is originated by the victim loading the offending URI. In this article we will see some ways to test a web application for this kind of vulnerability.</p>]]></Description>
-<Recommendation><![CDATA[
+	<DbId>12F3E8EB183249F6B99039D2E0F6AB1B</DbId>
+	<ParentDbId>00000000000000000000000000000000</ParentDbId>
+	<ScanName>Example</ScanName>
+	<WebSite>https://test.t.example.com:443</WebSite>
+	<WebSiteIP>10.11.10.8</WebSiteIP>
+	<VulnType>Privilege Escalation</VulnType>
+	<VulnUrl>https://test.t.example.com/en/help</VulnUrl>
+	<NormalizedUrl>https://test.t.example.com/en/help</NormalizedUrl>
+	<MatchedString>OK</MatchedString>
+	<NormalizedPostParams></NormalizedPostParams>
+	<VulnParam></VulnParam>
+	<ParameterName>N/A</ParameterName>
+	<HtmlEntityAttacked>URL</HtmlEntityAttacked>
+	<ModuleId>433C43A54C714F08B822B7932D410A78</ModuleId>
+	<AttackType>Privilege Escalation</AttackType>
+	<AttackScore>2-Low</AttackScore>
+	<AttackValue>N/A</AttackValue>
+	<OriginalValue>N/A</OriginalValue>
+	<Method>N/A</Method>
+	<RootCauseId>27E938574D526F62DE4FD063F81159FF</RootCauseId>
+	<LuxorRootCauseId>9B1FF1FBC10827468899ACDF4EDF865E</LuxorRootCauseId>
+	<FindingDbId>9CFD9BA94ADD4E5C9715277A37F7822C</FindingDbId>
+	<Description>
+		<![CDATA[<p>Privilege escalation occurs when a user gets access to more resources or functionality than they are normally allowed, 
+		and such elevation/changes should have been prevented by the application. This is usually caused by a flaw in the application. 
+	The result is that the application performs actions with more privileges than those intended by the developer or system administrator</p>]]></Description>
+	<Recommendation>
+		<![CDATA[<p>The most important step is to think through an application’s access control requirements and capture it in a web application security policy. 
+		We strongly recommend the use of an access control matrix to define the access control rules. Without documenting the security policy, 
+		there is no definition of what it means to be secure for that site. The policy should document what types of users can access the system, 
+		and what functions and content each of these types of users should be allowed to access. The access control mechanism should be extensively 
+		tested to be sure that there is no way to bypass it. This testing requires a variety of accounts and extensive attempts to access unauthorized 
+		content or functions.
 
-          <p>Reflected XSS attacks are also known as type 1 or non-persistent XSS attacks, and are the most frequent type of XSS attacks found nowadays.</p>
-
-          <p>When a web application is vulnerable to this type of attack, it will pass unvalidated input sent through requests to the client. The common modus operandi of the attack includes a design step, in which the attacker creates and tests an offending URI, a social engineering step, in which she convinces her victims to load this URI on their browsers, and the eventual execution of the offending code - using the victim's credentials.</p>
-
-          <p>Commonly the attacker's code is written in the Javascript language, but other scripting languages are also used, e.g., ActionScript and VBScript.</p>
-
-          <p>Attackers typically leverage these vulnerabilities to install key loggers, steal victim cookies, perform clipboard theft, and change the content of the page (e.g., download links).</p>
-
-          <p>One of the important matters about exploiting XSS vulnerabilities is character encoding. In some cases, the web server or the web application may not be filtering some encodings of characters, so, for example, the web application might filter out "&lt;script&gt;", but might not filter "%3Cscript%3E" which simply includes another encoding of tags. A nice tool for testing character encodings is OWASP's CAL9000. </p>]]></Recommendation>
-<Page>http://www.hackthissite.org/</Page>
-<Url>http://www.hackthissite.org/</Url>
-<VulnParamType>unknown</VulnParamType>
-<CrawlTrafficTemplate>R0VUIC8/eGh5azJhanEtcHQgSFRUUC8xLjENCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpBY2NlcHQtQ2hhcnNldDogKg0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoY29tcGF0aWJsZTsgTVNJRSA5LjA7IFdpbmRvd3MgTlQgNi4xOyBXT1c2NDsgVHJpZGVudC81LjApDQpIb3N0OiB3d3cuaGFja3RoaXNzaXRlLm9yZw0KQ29va2llOiBfX3V0bWE9MTk4NDAyODcwLjYwNzMyMTI4MC4xNDEzMjYwOTIzLjE0MTMyNjA5MjMuMTQxMzI2MDkyMy4xOyBfX3V0bXo9MTk4NDAyODcwLjE0MTMyNjA5MjMuMS4xLnV0bWNzcj0oZGlyZWN0KXx1dG1jY249KGRpcmVjdCl8dXRtY21kPShub25lKTsgYWRzX2JtX2xhc3RfbG9hZF9zdGF0dXM9Tk9UX0JMT0NLSU5HOyBwaHBiYjNfMjhwbGFfdT0xOyBwaHBiYjNfMjhwbGFfaz07IHBocGJiM18yOHBsYV9zaWQ9OTFkOTgzOThhY2U2NzUxZjI3YTI5ZmNmYmJhMmMwOTQ7IGJtX2xhc3RfbG9hZF9zdGF0dXM9Tk9UX0JMT0NLSU5HOyBQSFBTRVNTSUQ9OWh2bmxmczUxanNqMmlpZWZtaDc0dXN0YTA7IF9fdXRtYj0xOTg0MDI4NzAuNTAwLjEwLjE0MTMyNjA5MjM7IF9fdXRtYz0xOTg0MDI4NzA7IGJtX21vbnRobHlfdW5pcXVlPXRydWU7IGJtX2RhaWx5X3VuaXF1ZT10cnVlOyBsZXZlbDEwX2F1dGhvcml6ZWQ9bm87DQoNCg==</CrawlTrafficTemplate>
-<AttackClass>Application Developer</AttackClass>
-<CweId>79</CweId>
-<CAPEC>80</CAPEC>
-<DISSA_ASC>3580</DISSA_ASC>
-<OWASP2007>1</OWASP2007>
-<OWASP2010>2</OWASP2010>
-<OWASP2013>3</OWASP2013>
-<OVAL>6312</OVAL>
-<WASC>0</WASC>
-<ScanDate>2014-10-14 07:26:14</ScanDate>
-<ScanEnd>2014-10-15 01:59:37</ScanEnd>
-<DefenseBL>
-<DbId>E00DA69EEFFE4556A2EA833A05174698</DbId>
-<ParentDbId>7B9CAABF300A49688F4D30FA423EDFB8</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva>cross-site-scripting</Imperva>
-</DefenseBL>
-<DefenseWL>
-<DbId>ED59621943E9405B98ED9C3642011DBB</DbId>
-<ParentDbId>7B9CAABF300A49688F4D30FA423EDFB8</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseWL>
-<AttackList>
-<Attack>
-<DbId>0FBEDA330DDC427CB8EFB550E5170614</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue>'-alert(6759001)-'</AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>6759001</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>E70A833E09944518999100DD31DCDEDF</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>6B29EBB4F4094201B6541769C9D3BCFB</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue>';alert('xhsysg0a');//</AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>xhsysg0a</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>245EEA880FA748298BFDD11D286A2AA8</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>208D71F46FC84F7A97A51A9D204936E8</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue>'+alert(14357991)+'</AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>14357991</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>656C78FC2C5A4E8E88805D70E85C03BB</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>FF2039A5A33D4167B1BD5F10DBD78989</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue><![CDATA[xhyk2ajq-pt"><script>alert(15009454)</script>]]></AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>15009454</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>81362DB814024D8899B83D4A4FF7DE3A</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>96A0331A38FF47AFA13C547518721E08</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue><![CDATA[<img """><script>alert("x9khdxei")</script>">]]></AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>x9khdxei</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>49A7844AA3884CE19078E68B4F12E04B</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>23E5FDE97F5E42628FC74477F8513B8D</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue>');alert('x9krdis7');//</AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>x9krdis7</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>E982E7BCB4F64A56AC6AC1B8C697E284</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>B87C5202F4A74BEBA06936F6BD186076</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue>'-alert(15189768)-'</AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>15189768</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>E3F212EBD7134B958D3EB7D4369FE1A9</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>ED858AB85A2C46C9953BA5E86C412BEE</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackValue>';alert('x9lj3cup');//</AttackValue>
-<AttackVulnUrl>http://www.hackthissite.org/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>x9lj3cup</AttackMatchedString>
-<AttackRequestList>
-<AttackRequest>
-<DbId>2F292FE91CD64B86B98B536D9BA66FE7</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Request>R0VUIC8/Jy1hbGVydCg2NzU5MDAxKS0nIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUNoYXJzZXQ6ICoNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKGNvbXBhdGlibGU7IE1TSUUgOS4wOyBXaW5kb3dzIE5UIDYuMTsgV09XNjQ7IFRyaWRlbnQvNS4wKQ0KSG9zdDogd3d3LmhhY2t0aGlzc2l0ZS5vcmcNCkNvb2tpZTogUEhQU0VTU0lEPTlodm5sZnM1MWpzajJpaWVmbWg3NHVzdGEwOw0KDQo=</Request>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-</AttackList>
+		<br/>
+		Forced Browsing Past Access Control Checks – many sites require users to pass certain checks before being granted access to certain URLs 
+	that are typically ‘deeper’ down in the site. These checks must not be bypassable by a user that simply skips over the page with the security check</p>]]></Recommendation>
+	<Page>https://test.t.example.com/en/help</Page>
+	<Url>https://test.t.example.com/en/help</Url>
+	<VulnParamType>unknown</VulnParamType>
+	<CrawlTraffic>R0VUIC9lbi9oZWxwP3N1YmplY3Q.....MGNiOTEwDQoNCg==</CrawlTraffic>
+	<CrawlTrafficTemplate>R0VUIC9lbi9oZWxwP3N1YmplY3.....GNiOTEwDQoNCg==</CrawlTrafficTemplate>
+<CrawlTrafficResponse>SFRUUC8xLjEgMjAwIE9LDQpDYWNoZS1Db250.....aXB0PgoKPC9ib2R5Pgo8L2h0bWw+Cg==</CrawlTrafficResponse>
+	<AttackClass>Application Developer</AttackClass>
+	<CweId>264</CweId>
+	<CAPEC>0</CAPEC>
+	<DISSA_ASC>3500</DISSA_ASC>
+	<OWASP2007>7</OWASP2007>
+	<OWASP2010>3</OWASP2010>
+	<OWASP2013>2</OWASP2013>
+	<OWASP2017>2</OWASP2017>
+	<OVAL>0</OVAL>
+	<WASC>0</WASC>
+	<ScanDate>2018-03-19 16:30:53</ScanDate>
+	<ScanEnd>2018-03-19 16:48:09</ScanEnd>
+	<StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
+	<Confidence>Medium</Confidence>
+	<DefenseBL>
+		<DbId>F82B40D423864661A41C9F1323CAB60B</DbId>
+		<ParentDbId>613A47F32E334362AABEC26B51312380</ParentDbId>
+		<PcreRegex></PcreRegex>
+		<ModSecurity></ModSecurity>
+		<Snort></Snort>
+		<Imperva></Imperva>
+	</DefenseBL>
+	<DefenseWL>
+		<DbId>230A37C28D764DF5A1E7D1B66C154659</DbId>
+		<ParentDbId>613A47F32E334362AABEC26B51312380</ParentDbId>
+		<PcreRegex></PcreRegex>
+		<ModSecurity></ModSecurity>
+		<Snort></Snort>
+		<Imperva></Imperva>
+	</DefenseWL>
+	<AttackList>
+		<Attack>
+			<DbId>F3CE345BAF3442B48B2668809722032D</DbId>
+			<ParentDbId>00000000000000000000000000000000</ParentDbId>
+			<AttackId>PE_01</AttackId>
+			<AttackValue></AttackValue>
+			<AttackVulnUrl>https://test.t.example.com/en/help</AttackVulnUrl>
+			<AttackPostParams></AttackPostParams>
+			<AttackMatchedString>OK</AttackMatchedString>
+			<AttackDescription>Server allowed access to the resource without valid session</AttackDescription>
+			<AttackConfigDescription>Privilege Escalation</AttackConfigDescription>
+			<AttackUserNotes></AttackUserNotes>
+			<OriginalValue></OriginalValue>
+			<OriginalResponseCode>200</OriginalResponseCode>
+			<AttackRequestList>
+				<AttackRequest>
+					<DbId>0D9D750204F742E3B0FC513BFA1EABC9</DbId>
+					<ParentDbId>00000000000000000000000000000000</ParentDbId>
+					<Request>R0VUIC9lbi9oZWxwP3N1.....mlvDQoNCg==</Request>
+<Response>SFRUUC8xLjEgMjAwIE9LDQpDYWNoZ.....ib2R5Pgo8L2h0bWw+Cg==</Response>
+					<Benign>0</Benign>
+				</AttackRequest>
+				<AttackRequest>
+					<DbId>D12FBA19C7AD4279A0D698D14D6480BE</DbId>
+					<ParentDbId>00000000000000000000000000000000</ParentDbId>
+					<Request>R0VUIC9lbi9oZWxwIEhUVFA.....N0LnQuZ2FiLmlvL2VuLw0KDQo=</Request>
+<Response>SFRUUC8xLjEgMjAwIE9LDQpD.....PC9ib2R5Pgo8L2h0bWw+Cg==</Response>
+					<Benign>0</Benign>
+				</AttackRequest>
+			</AttackRequestList>
+		</Attack>
+		<Attack>
+			<DbId>24E4628D02CB4EF88C6DD5A4CC3A9649</DbId>
+			<ParentDbId>00000000000000000000000000000000</ParentDbId>
+			<AttackId>PE_01</AttackId>
+			<AttackValue></AttackValue>
+			<AttackVulnUrl>https://test.t.example.com/en/help</AttackVulnUrl>
+			<AttackPostParams></AttackPostParams>
+			<AttackMatchedString>OK</AttackMatchedString>
+			<AttackDescription>Server allowed access to the resource without valid session</AttackDescription>
+			<AttackConfigDescription>Privilege Escalation</AttackConfigDescription>
+			<AttackUserNotes></AttackUserNotes>
+			<OriginalValue></OriginalValue>
+			<OriginalResponseCode>200</OriginalResponseCode>
+			<AttackRequestList>
+				<AttackRequest>
+					<DbId>658B7A8BA3414DF38F98E55CF3C6A531</DbId>
+					<ParentDbId>00000000000000000000000000000000</ParentDbId>
+					<Request>R0VUIC9lbi9oZWxwP3N.....YWIuaW8NCg0K</Request>
+<Response>SFRUUC8xLjEgMjAwIE9LD.....2R5Pgo8L2h0bWw+Cg==</Response>
+					<Benign>0</Benign>
+				</AttackRequest>
+				<AttackRequest>
+					<DbId>90B1D05DE89E4276A5BF156DD037773C</DbId>
+					<ParentDbId>00000000000000000000000000000000</ParentDbId>
+					<Request>R0VUIC9lbi9oZWxw.....Z2FiLmlvL2VuLw0KDQo=</Request>
+<Response>SFRUUC8xLjEgMjAwI.....9ib2R5Pgo8L2h0bWw+Cg==</Response>
+					<Benign>0</Benign>
+				</AttackRequest>
+			</AttackRequestList>
+		</Attack>
+	</AttackList>
 </Vuln>
