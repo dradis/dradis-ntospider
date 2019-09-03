@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.name = 'dradis-appspider'
   spec.version = version
   spec.summary = 'Appspider add-on for the Dradis Framework.'
-  spec.description = 'This add-on allows you to upload and parse output produced from Rapid7's APPSpider Web Vulnerability Scanner into Dradis.'
+  spec.description = 'This add-on allows you to upload and parse output produced from Rapid7s APPSpider Web Vulnerability Scanner into Dradis.'
 
   spec.license = 'GPL-2'
 
