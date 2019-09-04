@@ -4,5 +4,5 @@ require 'dradis-plugins'
 # load this add-on's engine
 require 'dradis/plugins/appspider'
 
-# load supporting NTOSpider classes
+# load supporting AppSpider classes
 require 'appspider/vuln'

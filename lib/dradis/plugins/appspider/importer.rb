@@ -40,7 +40,7 @@ module Dradis::Plugins::AppSpider
       end
 
       @doc.xpath('/VulnSummary/VulnList/Vuln').each do |xml_vuln|
-        vuln = ::NTOSpider::Vuln.new(xml_vuln)
+        vuln = ::AppSpider::Vuln.new(xml_vuln)
 
         host_node_label = xml_vuln.at_xpath('./WebSite').text
         host_node_label = URI.parse(host_node_label).host rescue host_node_label
@@ -68,7 +68,7 @@ module Dradis::Plugins::AppSpider
     private
     def log_error_and_return(message)
       logger.fatal { message }
-      content_service.create_note text: "#[Title]#\nNTO upload error\n\n#[Description]#\n#{ message }"
+      content_service.create_note text: "#[Title]#\nAppSpider upload error\n\n#[Description]#\n#{ message }"
     end
   end
 end
