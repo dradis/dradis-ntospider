@@ -27,6 +27,6 @@ Gem::Specification.new do |spec|
   # s.add_dependency 'rails', '~> 4.1.1'
   spec.add_dependency 'dradis-plugins', '~> 3.6'
 
-  spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake', '~> 10.0'
 end
