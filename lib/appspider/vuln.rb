@@ -1,6 +1,6 @@
-module NTOSpider
+module AppSpider
   # This class represents each of the vulnerabilities reported in the
-  # NTOSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
+  # AppSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
   #
   # It provides a convenient way to access the information scattered all over
   # the XML entities.

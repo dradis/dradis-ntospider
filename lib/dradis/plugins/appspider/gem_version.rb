@@ -1,7 +1,7 @@
 module Dradis
   module Plugins
-    module NTOSpider
-      # Returns the version of the currently loaded NTOSpider as a <tt>Gem::Version</tt>
+    module AppSpider
+      # Returns the version of the currently loaded AppSpider as a <tt>Gem::Version</tt>
       def self.gem_version
         Gem::Version.new VERSION::STRING
       end

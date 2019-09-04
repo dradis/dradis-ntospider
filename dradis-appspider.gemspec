@@ -1,15 +1,15 @@
 $:.push File.expand_path('../lib', __FILE__)
-require 'dradis/plugins/ntospider/version'
-version = Dradis::Plugins::NTOSpider::VERSION::STRING
+require 'dradis/plugins/appspider/version'
+version = Dradis::Plugins::AppSpider::VERSION::STRING
 
 
 # Describe your gem and declare its dependencies:
 Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
-  spec.name = 'dradis-ntospider'
+  spec.name = 'dradis-appspider'
   spec.version = version
-  spec.summary = 'NTOSpider add-on for the Dradis Framework.'
-  spec.description = 'This add-on allows you to upload and parse output produced from NTOSpider Web Vulnerability Scanner into Dradis.'
+  spec.summary = 'AppSpider add-on for the Dradis Framework.'
+  spec.description = 'This add-on allows you to upload and parse output produced from AppSpider Web Vulnerability Scanner into Dradis.'
 
   spec.license = 'GPL-2'
 

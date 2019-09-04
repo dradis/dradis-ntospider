@@ -1,8 +1,8 @@
-module Dradis::Plugins::NTOSpider
+module Dradis::Plugins::AppSpider
   class FieldProcessor < Dradis::Plugins::Upload::FieldProcessor
 
     def post_initialize(args={})
-      @nto_object = ::NTOSpider::Vuln.new(data)
+      @nto_object = ::AppSpider::Vuln.new(data)
     end
 
     def value(args={})
