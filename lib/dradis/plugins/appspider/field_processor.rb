@@ -15,7 +15,7 @@ module Dradis::Plugins::APPSpider
       # The XML uses a <Method> entity, but 'method' is a reserved word here so:
       name = 'vuln_method' if name == 'method'
 
-      @appspider.try(name) || 'n/a'
+      @appspider_object.try(name) || 'n/a'
     end
   end
 
