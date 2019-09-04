@@ -1,6 +1,6 @@
 module Dradis
   module Plugins
-    module AppSpider
+    module APPSpider
       # Returns the version of the currently loaded AppSpider as a <tt>Gem::Version</tt>
       def self.gem_version
         Gem::Version.new VERSION::STRING

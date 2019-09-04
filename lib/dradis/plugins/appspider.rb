@@ -1,6 +1,6 @@
 module Dradis
   module Plugins
-    module AppSpider
+    module APPSpider
     end
   end
 end

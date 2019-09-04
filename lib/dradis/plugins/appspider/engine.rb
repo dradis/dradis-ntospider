@@ -1,6 +1,6 @@
-module Dradis::Plugins::AppSpider
+module Dradis::Plugins::APPSpider
   class Engine < ::Rails::Engine
-    isolate_namespace Dradis::Plugins::AppSpider
+    isolate_namespace Dradis::Plugins::APPSpider
 
     include ::Dradis::Plugins::Base
     description 'Processes AppSpider reports'

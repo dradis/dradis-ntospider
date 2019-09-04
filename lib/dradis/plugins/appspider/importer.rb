@@ -1,4 +1,4 @@
-module Dradis::Plugins::AppSpider
+module Dradis::Plugins::APPSpider
   class Importer < Dradis::Plugins::Upload::Importer
 
     BAD_FILENAME_ERROR_MESSAGE = \
@@ -40,7 +40,7 @@ module Dradis::Plugins::AppSpider
       end
 
       @doc.xpath('/VulnSummary/VulnList/Vuln').each do |xml_vuln|
-        vuln = ::AppSpider::Vuln.new(xml_vuln)
+        vuln = ::APPSpider::Vuln.new(xml_vuln)
 
         host_node_label = xml_vuln.at_xpath('./WebSite').text
         host_node_label = URI.parse(host_node_label).host rescue host_node_label

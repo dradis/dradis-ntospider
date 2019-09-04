@@ -1,4 +1,4 @@
-class AppSpiderTasks < Thor
+class APPSpiderTasks < Thor
   include Rails.application.config.dradis.thor_helper_module
 
   namespace "dradis:plugins:appspider"
@@ -14,7 +14,7 @@ class AppSpiderTasks < Thor
 
     detect_and_set_project_scope
 
-    importer = Dradis::Plugins::AppSpider::Importer.new(task_options)
+    importer = Dradis::Plugins::APPSpider::Importer.new(task_options)
     importer.import(file: file_path)
   end
 end
