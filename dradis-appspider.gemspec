@@ -1,6 +1,6 @@
 $:.push File.expand_path('../lib', __FILE__)
 require 'dradis/plugins/appspider/version'
-version = Dradis::Plugins::Appspider::VERSION::STRING
+version = Dradis::Plugins::AppSpider::VERSION::STRING
 
 
 # Describe your gem and declare its dependencies:
@@ -8,8 +8,8 @@ Gem::Specification.new do |spec|
   spec.platform      = Gem::Platform::RUBY
   spec.name = 'dradis-appspider'
   spec.version = version
-  spec.summary = 'Appspider add-on for the Dradis Framework.'
-  spec.description = 'This add-on allows you to upload and parse output produced from Rapid7s APPSpider Web Vulnerability Scanner into Dradis.'
+  spec.summary = 'AppSpider add-on for the Dradis Framework.'
+  spec.description = 'This add-on allows you to upload and parse output produced from Rapid7s AppSpider Web Vulnerability Scanner into Dradis.'
 
   spec.license = 'GPL-2'
 
@@ -27,6 +27,6 @@ Gem::Specification.new do |spec|
   # s.add_dependency 'rails', '~> 4.1.1'
   spec.add_dependency 'dradis-plugins', '~> 3.6'
 
-  spec.add_development_dependency 'bundler', '~> 1.6'
+  spec.add_development_dependency 'bundler'
   spec.add_development_dependency 'rake', '~> 10.0'
 end

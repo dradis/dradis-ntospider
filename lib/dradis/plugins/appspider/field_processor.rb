@@ -1,8 +1,8 @@
-module Dradis::Plugins::Appspider
+module Dradis::Plugins::AppSpider
   class FieldProcessor < Dradis::Plugins::Upload::FieldProcessor
 
     def post_initialize(args={})
-      @app_object = ::Appspider::Vuln.new(data)
+      @appspider_object = ::AppSpider::Vuln.new(data)
     end
 
     def value(args={})
@@ -15,7 +15,7 @@ module Dradis::Plugins::Appspider
       # The XML uses a <Method> entity, but 'method' is a reserved word here so:
       name = 'vuln_method' if name == 'method'
 
-      @app_object.try(name) || 'n/a'
+      @appspider.try(name) || 'n/a'
     end
   end
 

@@ -1,6 +1,6 @@
-module Appspider
+module AppSpider
   # This class represents each of the vulnerabilities reported in the
-  # Appspider VulnerabilitiesSummary.xml file as <Vuln> entities.
+  # AppSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
   #
   # It provides a convenient way to access the information scattered all over
   # the XML entities.
@@ -33,7 +33,7 @@ module Appspider
         :pcre_regex_bl, :mod_security_bl, :snort_bl, :imperva_bl, 
         :pcre_regex_wl, :mod_security_wl, :snort_wl, :imperva_wl
       ]
-end
+		end
 
     # This allows external callers (and specs) to check for implemented
     # properties

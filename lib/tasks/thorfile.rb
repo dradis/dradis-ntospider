@@ -1,9 +1,9 @@
-class AppspiderTasks < Thor
+class AppSpiderTasks < Thor
   include Rails.application.config.dradis.thor_helper_module
 
   namespace "dradis:plugins:appspider"
 
-  desc "upload FILE", "upload APPSpider XML results"
+  desc "upload FILE", "upload AppSpider XML results"
   def upload(file_path)
     require 'config/environment'
 
@@ -14,7 +14,7 @@ class AppspiderTasks < Thor
 
     detect_and_set_project_scope
 
-    importer = Dradis::Plugins::Appspider::Importer.new(task_options)
+    importer = Dradis::Plugins::AppSpider::Importer.new(task_options)
     importer.import(file: file_path)
   end
 end
