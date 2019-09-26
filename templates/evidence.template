@@ -2,10 +2,10 @@
 %evidence.web_site%
 
 #[URL]#
-%evidence.vuln_url%
+%evidence.attack_vuln_url%
 
 #[Normalized URL]#
-%evidence.normalized_url%
+%evidence.vuln_url%
 
 #[Param]#
 %evidence.vuln_param%

@@ -1,3 +1,8 @@
+## Dradis Framework 3.15 (XXX, 2019) ##
+
+*  Migration from NTOSpider to AppSpider naming convention.
+*  Expose additional fields for use in both Issue and Evidence.
+
 ## Dradis Framework 3.14 (August, 2019) ##
 
 *   No changes.

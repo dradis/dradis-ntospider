@@ -1,6 +1,6 @@
-module NTOSpider
+module Appspider
   # This class represents each of the vulnerabilities reported in the
-  # NTOSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
+  # AppSpider VulnerabilitiesSummary.xml file as <Vuln> entities.
   #
   # It provides a convenient way to access the information scattered all over
   # the XML entities.
@@ -21,13 +21,19 @@ module NTOSpider
         # attributes
 
         # simple tags
-        :attack_class, :attack_score, :attack_type, :attack_value, :capec,
+        :attack_class, :attack_score, :attack_type, :capec,
         :cwe_id, :description, :dissa_asc, :normalized_url, :oval, :owasp2007,
-        :owasp2010, :owasp2013, :recommendation, :vuln_method, :vuln_param,
-        :vuln_type, :vuln_url, :web_site
+        :owasp2010, :owasp2013, :owasp2017, :recommendation, :vuln_method, :vuln_param,
+        :vuln_type, :vuln_url, :web_site, :web_site_ip, :html_entity_attacked, :page, :url, 
+        :vuln_param_type, :wasc, :scan_date, :statistically_prevalent_original_response_code, 
+        :confidence,  
         # nested tags
+        :attack_value, :attack_vuln_url, :attack_post_params, :attack_matched_string,
+        :attack_description, :attack_config_description, :benign, :attack_request, :attack_response, 
+        :pcre_regex_bl, :mod_security_bl, :snort_bl, :imperva_bl, 
+        :pcre_regex_wl, :mod_security_wl, :snort_wl, :imperva_wl
       ]
-end
+		end
 
     # This allows external callers (and specs) to check for implemented
     # properties
@@ -55,13 +61,37 @@ end
       # First we try the attributes. In Ruby we use snake_case, but in XML
       # CamelCase is used for some attributes
       translations_table = {
+        web_site:  'WebSite',
+      	web_site_ip:	'WebSiteIP',
+      	html_entity_attacked:	'HtmlEntityAttacked',
+      	scan_date:	'ScanDate',
+      	statistically_prevalent_original_response_code:	'StatisticallyPrevalentOriginalResponseCode',
         capec:     'CAPEC',
         dissa_asc: 'DISSA_ASC',
         owasp2007: 'OWASP2007',
         owasp2010: 'OWASP2010',
         owasp2013: 'OWASP2013',
+        owasp2017: 'OWASP2017',
         oval:      'OVAL',
-        wasc:      'WASC'
+        wasc:      'WASC',
+        attack_value:          'AttackValue',
+        attack_vuln_url:       'AttackVulnUrl', 
+        attack_post_params:    'AttackPostParams', 
+        attack_description:			'AttackDescription',
+        attack_config_description:	'AttackConfigDescription',
+        attack_matched_string: 'AttackMatchedString',
+        original_value:					'OriginalValue',
+        attack_request:        'AttackRequestList/AttackRequest/Request', 
+        attack_response:       'AttackRequestList/AttackRequest/Response',
+        benign:									'AttackRequestList/AttackRequest/Benign',
+        pcre_regex_bl:					'DefenseBL/PcreRegex',
+        mod_security_bl:				'DefenseBL/ModSecurity',
+        snort_bl:								'DefenseBL/Snort',
+        imperva_bl:							'DefenseBL/Imperva',
+        pcre_regex_wl:					'DefenseWL/PcreRegex',
+        mod_security_wl:				'DefenseWL/ModSecurity',
+        snort_wl:								'DefenseWL/Snort',
+        imperva_wl:							'DefenseWL/Imperva'
       }
 
       method_name = translations_table.fetch(method, method.to_s.camelcase)
