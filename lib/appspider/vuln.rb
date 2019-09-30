@@ -21,19 +21,19 @@ module Appspider
         # attributes
 
         # simple tags
-        :attack_class, :attack_score, :attack_type, :capec,
-        :cwe_id, :description, :dissa_asc, :normalized_url, :oval, :owasp2007,
-        :owasp2010, :owasp2013, :owasp2017, :recommendation, :vuln_method, :vuln_param,
-        :vuln_type, :vuln_url, :web_site, :web_site_ip, :html_entity_attacked, :page, :url, 
-        :vuln_param_type, :wasc, :scan_date, :statistically_prevalent_original_response_code, 
-        :confidence,  
+        :attack_class, :attack_score, :attack_type, :attack_value, :capec,
+        :confidence, :cwe_id, :description, :dissa_asc, :html_entity_attacked,
+        :normalized_url, :oval, :owasp2007, :owasp2010, :owasp2013, :owasp2017,
+        :page, :recommendation, :scan_date,
+        :statistically_prevalent_original_response_code, :url, :vuln_method,
+        :vuln_param, :vuln_param_type, :vuln_type, :vuln_url, :wasc, :web_site,
+        :web_site_ip,
+
         # nested tags
-        :attack_value, :attack_vuln_url, :attack_post_params, :attack_matched_string,
-        :attack_description, :attack_config_description, :benign, :attack_request, :attack_response, 
-        :pcre_regex_bl, :mod_security_bl, :snort_bl, :imperva_bl, 
-        :pcre_regex_wl, :mod_security_wl, :snort_wl, :imperva_wl
+        :imperva_bl, :imperva_wl, :mod_security_bl, :mod_security_wl,
+        :pcre_regex_bl, :pcre_regex_wl, :snort_bl, :snort_wl
       ]
-		end
+    end
 
     # This allows external callers (and specs) to check for implemented
     # properties
@@ -61,42 +61,28 @@ module Appspider
       # First we try the attributes. In Ruby we use snake_case, but in XML
       # CamelCase is used for some attributes
       translations_table = {
-        web_site:  'WebSite',
-      	web_site_ip:	'WebSiteIP',
-      	html_entity_attacked:	'HtmlEntityAttacked',
-      	scan_date:	'ScanDate',
-      	statistically_prevalent_original_response_code:	'StatisticallyPrevalentOriginalResponseCode',
-        capec:     'CAPEC',
-        dissa_asc: 'DISSA_ASC',
-        owasp2007: 'OWASP2007',
-        owasp2010: 'OWASP2010',
-        owasp2013: 'OWASP2013',
-        owasp2017: 'OWASP2017',
-        oval:      'OVAL',
-        wasc:      'WASC',
-        attack_value:          'AttackValue',
-        attack_vuln_url:       'AttackVulnUrl', 
-        attack_post_params:    'AttackPostParams', 
-        attack_description:			'AttackDescription',
-        attack_config_description:	'AttackConfigDescription',
-        attack_matched_string: 'AttackMatchedString',
-        original_value:					'OriginalValue',
-        attack_request:        'AttackRequestList/AttackRequest/Request', 
-        attack_response:       'AttackRequestList/AttackRequest/Response',
-        benign:									'AttackRequestList/AttackRequest/Benign',
-        pcre_regex_bl:					'DefenseBL/PcreRegex',
-        mod_security_bl:				'DefenseBL/ModSecurity',
-        snort_bl:								'DefenseBL/Snort',
-        imperva_bl:							'DefenseBL/Imperva',
-        pcre_regex_wl:					'DefenseWL/PcreRegex',
-        mod_security_wl:				'DefenseWL/ModSecurity',
-        snort_wl:								'DefenseWL/Snort',
-        imperva_wl:							'DefenseWL/Imperva'
+                  capec: 'CAPEC',
+              dissa_asc: 'DISSA_ASC',
+             imperva_bl: 'DefenseBL/Imperva',
+             imperva_wl: 'DefenseWL/Imperva',
+        mod_security_bl: 'DefenseBL/ModSecurity',
+        mod_security_wl: 'DefenseWL/ModSecurity',
+                   oval: 'OVAL',
+              owasp2007: 'OWASP2007',
+              owasp2010: 'OWASP2010',
+              owasp2013: 'OWASP2013',
+              owasp2017: 'OWASP2017',
+          pcre_regex_bl: 'DefenseBL/PcreRegex',
+          pcre_regex_wl: 'DefenseWL/PcreRegex',
+               snort_bl: 'DefenseBL/Snort',
+               snort_wl: 'DefenseWL/Snort',
+                   wasc: 'WASC',
+            web_site_ip: 'WebSiteIP'
       }
 
       method_name = translations_table.fetch(method, method.to_s.camelcase)
 
-      # no attributes in the <issue> node
+      # no attributes in the <Vuln> node
       # return @xml.attributes[method_name].value if @xml.attributes.key?(method_name)
 
       # Then we try simple children tags: name, type, ...
@@ -143,6 +129,5 @@ module Appspider
     def tags_with_html_content
       [:description, :recommendation]
     end
-
   end
 end

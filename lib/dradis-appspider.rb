@@ -5,4 +5,5 @@ require 'dradis-plugins'
 require 'dradis/plugins/appspider'
 
 # load supporting AppSpider classes
+require 'appspider/attack'
 require 'appspider/vuln'
