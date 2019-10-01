@@ -1,696 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <VulnSummary>
-<AppVersion>7.0.033.1</AppVersion>
-<ScanName>Example</ScanName>
+<AppVersion>7.2.87.1</AppVersion>
+<ScanName>webscantest</ScanName>
 <Metadata></Metadata>
-<ScanStarted>2018-03-09 09:40:50</ScanStarted>
-<ScanDuration>01:25:23</ScanDuration>
-<ScanEnded>2018-03-09 11:06:13</ScanEnded>
-<UTCOffset>-5</UTCOffset>
-<ResourcesCrawled>654</ResourcesCrawled>
-<NumberOfRequests>29419</NumberOfRequests>
-<NumberOfFailedRequests>9</NumberOfFailedRequests>
+<ScanStarted>2019-09-25 09:37:13</ScanStarted>
+<ScanDuration>00:11:27</ScanDuration>
+<ScanEnded>2019-09-25 09:48:40</ScanEnded>
+<UTCOffset>1</UTCOffset>
+<ResourcesCrawled>302</ResourcesCrawled>
+<NumberOfRequests>4102</NumberOfRequests>
+<NumberOfFailedRequests>8</NumberOfFailedRequests>
 	<VulnList>
 <Vuln>
-	<DbId>12F3E8EB183249F6B99039D2E0F6AB1B</DbId>
-	<ParentDbId>00000000000000000000000000000000</ParentDbId>
-	<ScanName>Example</ScanName>
-	<WebSite>https://test.t.example.com:443</WebSite>
-	<WebSiteIP>10.11.10.8</WebSiteIP>
-	<VulnType>Privilege Escalation</VulnType>
-	<VulnUrl>https://test.t.example.com/en/help</VulnUrl>
-	<NormalizedUrl>https://test.t.example.com/en/help</NormalizedUrl>
-	<MatchedString>OK</MatchedString>
-	<NormalizedPostParams></NormalizedPostParams>
-	<VulnParam></VulnParam>
-	<ParameterName>N/A</ParameterName>
-	<HtmlEntityAttacked>URL</HtmlEntityAttacked>
-	<ModuleId>433C43A54C714F08B822B7932D410A78</ModuleId>
-	<AttackType>Privilege Escalation</AttackType>
-	<AttackScore>2-Low</AttackScore>
-	<AttackValue>N/A</AttackValue>
-	<OriginalValue>N/A</OriginalValue>
-	<Method>N/A</Method>
-	<RootCauseId>27E938574D526F62DE4FD063F81159FF</RootCauseId>
-	<LuxorRootCauseId>9B1FF1FBC10827468899ACDF4EDF865E</LuxorRootCauseId>
-	<FindingDbId>9CFD9BA94ADD4E5C9715277A37F7822C</FindingDbId>
-	<Description>
-		<![CDATA[<p>Privilege escalation occurs when a user gets access to more resources or functionality than they are normally allowed, 
-		and such elevation/changes should have been prevented by the application. This is usually caused by a flaw in the application. 
-	The result is that the application performs actions with more privileges than those intended by the developer or system administrator</p>]]></Description>
-	<Recommendation>
-		<![CDATA[<p>The most important step is to think through an application’s access control requirements and capture it in a web application security policy. 
-		We strongly recommend the use of an access control matrix to define the access control rules. Without documenting the security policy, 
-		there is no definition of what it means to be secure for that site. The policy should document what types of users can access the system, 
-		and what functions and content each of these types of users should be allowed to access. The access control mechanism should be extensively 
-		tested to be sure that there is no way to bypass it. This testing requires a variety of accounts and extensive attempts to access unauthorized 
-		content or functions.
-
-		<br/>
-		Forced Browsing Past Access Control Checks – many sites require users to pass certain checks before being granted access to certain URLs 
-	that are typically ‘deeper’ down in the site. These checks must not be bypassable by a user that simply skips over the page with the security check</p>]]></Recommendation>
-	<Page>https://test.t.example.com/en/help</Page>
-	<Url>https://test.t.example.com/en/help</Url>
-	<VulnParamType>unknown</VulnParamType>
-	<CrawlTraffic>R0VUIC9lbi9oZWxwP3N1YmplY3Q.....MGNiOTEwDQoNCg==</CrawlTraffic>
-	<CrawlTrafficTemplate>R0VUIC9lbi9oZWxwP3N1YmplY3.....GNiOTEwDQoNCg==</CrawlTrafficTemplate>
-<CrawlTrafficResponse>SFRUUC8xLjEgMjAwIE9LDQpDYWNoZS1Db250.....aXB0PgoKPC9ib2R5Pgo8L2h0bWw+Cg==</CrawlTrafficResponse>
-	<AttackClass>Application Developer</AttackClass>
-	<CweId>264</CweId>
-	<CAPEC>0</CAPEC>
-	<DISSA_ASC>3500</DISSA_ASC>
-	<OWASP2007>7</OWASP2007>
-	<OWASP2010>3</OWASP2010>
-	<OWASP2013>2</OWASP2013>
-	<OWASP2017>2</OWASP2017>
-	<OVAL>0</OVAL>
-	<WASC>0</WASC>
-	<ScanDate>2018-03-19 16:30:53</ScanDate>
-	<ScanEnd>2018-03-19 16:48:09</ScanEnd>
-	<StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
-	<Confidence>Medium</Confidence>
-	<DefenseBL>
-		<DbId>F82B40D423864661A41C9F1323CAB60B</DbId>
-		<ParentDbId>613A47F32E334362AABEC26B51312380</ParentDbId>
-		<PcreRegex></PcreRegex>
-		<ModSecurity></ModSecurity>
-		<Snort></Snort>
-		<Imperva></Imperva>
-	</DefenseBL>
-	<DefenseWL>
-		<DbId>230A37C28D764DF5A1E7D1B66C154659</DbId>
-		<ParentDbId>613A47F32E334362AABEC26B51312380</ParentDbId>
-		<PcreRegex></PcreRegex>
-		<ModSecurity></ModSecurity>
-		<Snort></Snort>
-		<Imperva></Imperva>
-	</DefenseWL>
-	<AttackList>
-		<Attack>
-			<DbId>F3CE345BAF3442B48B2668809722032D</DbId>
-			<ParentDbId>00000000000000000000000000000000</ParentDbId>
-			<AttackId>PE_01</AttackId>
-			<AttackValue></AttackValue>
-			<AttackVulnUrl>https://test.t.example.com/en/help</AttackVulnUrl>
-			<AttackPostParams></AttackPostParams>
-			<AttackMatchedString>OK</AttackMatchedString>
-			<AttackDescription>Server allowed access to the resource without valid session</AttackDescription>
-			<AttackConfigDescription>Privilege Escalation</AttackConfigDescription>
-			<AttackUserNotes></AttackUserNotes>
-			<OriginalValue></OriginalValue>
-			<OriginalResponseCode>200</OriginalResponseCode>
-			<AttackRequestList>
-				<AttackRequest>
-					<DbId>0D9D750204F742E3B0FC513BFA1EABC9</DbId>
-					<ParentDbId>00000000000000000000000000000000</ParentDbId>
-					<Request>R0VUIC9lbi9oZWxwP3N1.....mlvDQoNCg==</Request>
-<Response>SFRUUC8xLjEgMjAwIE9LDQpDYWNoZ.....ib2R5Pgo8L2h0bWw+Cg==</Response>
-					<Benign>0</Benign>
-				</AttackRequest>
-				<AttackRequest>
-					<DbId>D12FBA19C7AD4279A0D698D14D6480BE</DbId>
-					<ParentDbId>00000000000000000000000000000000</ParentDbId>
-					<Request>R0VUIC9lbi9oZWxwIEhUVFA.....N0LnQuZ2FiLmlvL2VuLw0KDQo=</Request>
-<Response>SFRUUC8xLjEgMjAwIE9LDQpD.....PC9ib2R5Pgo8L2h0bWw+Cg==</Response>
-					<Benign>0</Benign>
-				</AttackRequest>
-			</AttackRequestList>
-		</Attack>
-		<Attack>
-			<DbId>24E4628D02CB4EF88C6DD5A4CC3A9649</DbId>
-			<ParentDbId>00000000000000000000000000000000</ParentDbId>
-			<AttackId>PE_01</AttackId>
-			<AttackValue></AttackValue>
-			<AttackVulnUrl>https://test.t.example.com/en/help</AttackVulnUrl>
-			<AttackPostParams></AttackPostParams>
-			<AttackMatchedString>OK</AttackMatchedString>
-			<AttackDescription>Server allowed access to the resource without valid session</AttackDescription>
-			<AttackConfigDescription>Privilege Escalation</AttackConfigDescription>
-			<AttackUserNotes></AttackUserNotes>
-			<OriginalValue></OriginalValue>
-			<OriginalResponseCode>200</OriginalResponseCode>
-			<AttackRequestList>
-				<AttackRequest>
-					<DbId>658B7A8BA3414DF38F98E55CF3C6A531</DbId>
-					<ParentDbId>00000000000000000000000000000000</ParentDbId>
-					<Request>R0VUIC9lbi9oZWxwP3N.....YWIuaW8NCg0K</Request>
-<Response>SFRUUC8xLjEgMjAwIE9LD.....2R5Pgo8L2h0bWw+Cg==</Response>
-					<Benign>0</Benign>
-				</AttackRequest>
-				<AttackRequest>
-					<DbId>90B1D05DE89E4276A5BF156DD037773C</DbId>
-					<ParentDbId>00000000000000000000000000000000</ParentDbId>
-					<Request>R0VUIC9lbi9oZWxw.....Z2FiLmlvL2VuLw0KDQo=</Request>
-<Response>SFRUUC8xLjEgMjAwI.....9ib2R5Pgo8L2h0bWw+Cg==</Response>
-					<Benign>0</Benign>
-				</AttackRequest>
-			</AttackRequestList>
-		</Attack>
-	</AttackList>
-</Vuln>
-<Vuln>
-<DbId>B768D0CB2C0A41098840153F562D106C</DbId>
+<DbId>BAF9192674E1485A9D9965DA1832D498</DbId>
 <ParentDbId>00000000000000000000000000000000</ParentDbId>
-<ScanName>ExampleApplication</ScanName>
-<WebSite>https://test.example.com:443</WebSite>
-<WebSiteIP>1.2.3.4</WebSiteIP>
-<VulnType>Browser Cache directive (leaking sensitive information)</VulnType>
-<VulnUrl>https://test.example.com/images/landing/pie-chart_direct-access.svg</VulnUrl>
-<NormalizedUrl>https://test.example.com/images/landing/pie-chart_direct-access.svg</NormalizedUrl>
-<MatchedString><![CDATA[Expires: Sat, 14 Apr 2018 19:40:38 GMT
-Cache-Control: max-age=5184000]]></MatchedString>
+<ScanName>webscantest</ScanName>
+<WebSite>http://www.webscantest.com:80</WebSite>
+<WebSiteIP>69.164.223.208</WebSiteIP>
+<VulnType>Browser Cache directive (web application performance)</VulnType>
+<VulnUrl>http://www.webscantest.com/css/style.css</VulnUrl>
+<NormalizedUrl>http://www.webscantest.com/css/style.css</NormalizedUrl>
+<MatchedString><![CDATA[HTTP/1.1 200 OK
+Connection: close
+Date: Wed, 25 Sep 2019 08:40:20 GMT
+Content-Length: 2706
+Content-Type: text/css
+Content-Encoding: gzip
+Last-Modified: Mon, 21 Dec 2015 23:35:46 GMT
+Accept-Ranges: bytes
+ETag: "277e-52770f2c5dc9f-gzip"
+Server: Apache/2.4.7 (Ubuntu)
+Vary: Accept-Encoding]]></MatchedString>
 <NormalizedPostParams></NormalizedPostParams>
 <VulnParam></VulnParam>
 <ParameterName>N/A</ParameterName>
 <HtmlEntityAttacked>URL</HtmlEntityAttacked>
-<ModuleId>E33B272027B844D5BBB8EDE541983474</ModuleId>
-<AttackType>Browser Cache Directive</AttackType>
-<AttackScore>2-Low</AttackScore>
+<ModuleId>13B4C758BA174200885A29CBA7346165</ModuleId>
+<AttackType>Missing Browser Cache Directive</AttackType>
+<AttackScore>1-Informational</AttackScore>
 <AttackValue>N/A</AttackValue>
 <OriginalValue>N/A</OriginalValue>
 <Method>N/A</Method>
-<RootCauseId>6CD1F2ECFD568DCEC25A7CFFA68B2896</RootCauseId>
-<LuxorRootCauseId>0E23144FF65EA6AFA04A0812F92D91CB</LuxorRootCauseId>
-<FindingDbId>3B638ECC950B4437BCA8A6C9BACE7BFE</FindingDbId>
+<RootCauseId>8BC3B54836529AA847E7FF7C525413C1</RootCauseId>
+<LuxorRootCauseId>9EC1B9612B6A7C8BBE788A299C14DCEF</LuxorRootCauseId>
+<FindingDbId>63C2B78F07274DEAA255F539A80FF0C8</FindingDbId>
 <Description><![CDATA[
         <p>
-        The response browser cache headers allow response caching. If the response contains sensitive information then it may be leaked into the browser cache.
+        The response does not include cache directives, so an user receives this page from the server every time. That could mean a significant increase in server load, so that every hit to the page will generate a request to the server. The page does not contain any sensitive information, also it is accessible to unautorized users.
         </p>
         <p>
-        By default, a response is cacheable if the requirements of the request method, request header fields, and the response status indicate that it is cacheable. 
-        Finally, unless specifically constrained by a cache-control directive, a caching system MAY always store a successful response as a cache entry, 
-        MAY return it without validation if it is fresh, and MAY return it after successful validation. If there is neither a cache validator nor an explicit expiration time associated with a response, 
-        we do not expect it to be cached, but certain caches MAY violate this expectation (for example, when little or no network connectivity is available). 
-        A client can usually detect that such a response was taken from a cache by comparing the Date header to the current time. 
-        Therefore, the browser has a capability to temporarily store some of the pages browsed. These cached files are stored in a folder. 
-        When we ask for these pages again, the browser displays them from its cache. Logging out from an application obviously does not clear the browser cache of any sensitive information 
-        that might have been stored.
-        </p>]]></Description>
+        By default, a response is cacheable if the requirements of the request method, request header fields, and the response status indicate that it is cacheable. Therefore, the browser has a capability to temporarily store some of the pages browsed. These cached files are stored in a folder. When we ask for these pages again, the browser displays them from its cache.
+        </P]]></Description>
 <Recommendation><![CDATA[
-      <p>
-      Update Cache-Control http header to include no-store directive. The purpose of this directive is to prevent the inadvertent release or retention of sensitive information.
-      The suggested HTTP response headers are: <br/>
-        Cache-Control: no-cache, no-store <br/>
-        Expires: 0 <br/>
-        Pragma: no-cache <br/>
-      </p>]]></Recommendation>
-<Page>https://test.example.com/images/landing/pie-chart_direct-access.svg</Page>
-<Url>https://test.example.com/images/landing/pie-chart_direct-access.svg</Url>
+        <p>
+        Put a Cache-Control directive, freshness indicator, on the page, so it is sent with each of the original responses. As a result the browser can pull the files directly from the browser cache on subsequent requests without any need for server validation until the expires time assigned to the object is reached.
+        <br/>
+        A correct cache MUST respond to a request with the most up-to-date response held by the cache that is appropriate to the request.
+        <br/>
+        Do not force the browser to store the page if it contains any sensitive information.
+        </p>]]></Recommendation>
+<Page>http://www.webscantest.com/css/style.css</Page>
+<Url>http://www.webscantest.com/css/style.css</Url>
 <VulnParamType>unknown</VulnParamType>
-<CrawlTraffic>UE9TVCAvaW5kZXgucGhwL...</CrawlTraffic>
-<CrawlTrafficTemplate>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficTemplate>
-<CrawlTrafficResponse>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficResponse>
-<AttackClass>Application Developer</AttackClass>
-<CweId>525</CweId>
-<CAPEC>1</CAPEC>
-<DISSA_ASC>3480</DISSA_ASC>
-<OWASP2007>9</OWASP2007>
-<OWASP2010>9</OWASP2010>
-<OWASP2013>6</OWASP2013>
-<OWASP2017>6</OWASP2017>
-<OVAL>0</OVAL>
-<WASC>0</WASC>
-<ScanDate>2018-02-13 17:11:18</ScanDate>
-<ScanEnd>2018-02-13 23:19:31</ScanEnd>
-<StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
-<Confidence>High</Confidence>
-<DefenseBL>
-<DbId>BF45CDE9882A4E8589A91D0B547A4D7A</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseBL>
-<DefenseWL>
-<DbId>71F8C6C2C7944F0E958D51DD442E1AE4</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseWL>
-<AttackList>
-<Attack>
-<DbId>86386ADAB51B4BE18E6613C6893EE171</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>BROWSERCACHECHECK01</AttackId>
-<AttackValue></AttackValue>
-<AttackVulnUrl>https://test.example.com/images/landing/pie-chart_direct-access.svg</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString><![CDATA[Expires: Sat, 14 Apr 2018 19:40:38 GMT
-Cache-Control: max-age=5184000]]></AttackMatchedString>
-<AttackDescription></AttackDescription>
-<AttackConfigDescription>Browser Cache Directive</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue></OriginalValue>
-<OriginalResponseCode>200</OriginalResponseCode>
-</Attack>
-</AttackList>
-</Vuln>
-<Vuln>
-	<Vuln>
-<DbId>22E9CC2AA7C84BBD814ECB43170E5457</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<ScanName>ExampleApplication</ScanName>
-<WebSite>https://test.example.com:443</WebSite>
-<WebSiteIP>1.2.3.4</WebSiteIP>
-<VulnType>HttpOnly attribute</VulnType>
-<VulnUrl>https://test.example.com/index.php/saml/auth</VulnUrl>
-<NormalizedUrl>https://test.example.com/index.php/saml/auth</NormalizedUrl>
-<MatchedString>PHPSESSID=c63cee5955c92edf04bf618784ad8151; path=/</MatchedString>
-<NormalizedPostParams></NormalizedPostParams>
-<VulnParam>PHPSESSID</VulnParam>
-<ParameterName>PHPSESSID</ParameterName>
-<HtmlEntityAttacked></HtmlEntityAttacked>
-<ModuleId>BBFCB66779ED4E7292C08F19E9BB45DF</ModuleId>
-<AttackType>HttpOnly attribute not set</AttackType>
-<AttackScore>2-Low</AttackScore>
-<AttackValue></AttackValue>
-<OriginalValue>PHPSESSID=c63cee5955c92edf04bf618784ad8151; path=/</OriginalValue>
-<Method>GET</Method>
-<RootCauseId>F97A5E3EE2D70F486DA0FD995096DBB3</RootCauseId>
-<LuxorRootCauseId>B7B51CBFAB857CE6C47821A14C18AADE</LuxorRootCauseId>
-<FindingDbId>5BF52AE9F4714B26A9D24834469E163B</FindingDbId>
-<Description><![CDATA[<p>The HttpOnly attribute directs browsers to use cookies via the HTTP protocol only.  An HttpOnly cookie is not accessible via non-HTTP methods, such as calls via JavaScript (e.g., referencing "document.cookie"), and therefore cannot be stolen easily via cross-site scripting (a pervasive attack technique).</p>]]></Description>
-<Recommendation><![CDATA[<p>If the HttpOnly flag (optional) is included in the HTTP response header, the cookie cannot be accessed through client side script (again if the browser supports this flag). As a result, even if a cross-site scripting (XSS) flaw exists, and a user accidentally accesses a link that exploits this flaw, the browser (primarily Internet Explorer) will not reveal the cookie to a third party.</p>]]></Recommendation>
-<Page>https://test.example.com/index.php/saml/auth</Page>
-<Url>https://test.example.com/index.php/saml/auth</Url>
-<VulnParamType>unknown</VulnParamType>
-<CrawlTraffic>UE9TVCAvaW5kZXgucGhwL...</CrawlTraffic>
-<CrawlTrafficTemplate>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficTemplate>
-<CrawlTrafficResponse>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficResponse>
-<AttackClass>Application Developer</AttackClass>
-<CweId>79</CweId>
-<CAPEC>21</CAPEC>
-<DISSA_ASC>3110</DISSA_ASC>
-<OWASP2007>1</OWASP2007>
-<OWASP2010>2</OWASP2010>
-<OWASP2013>3</OWASP2013>
-<OWASP2017>3</OWASP2017>
-<OVAL>0</OVAL>
-<WASC>0</WASC>
-<ScanDate>2018-02-13 17:11:18</ScanDate>
-<ScanEnd>2018-02-13 23:19:31</ScanEnd>
-<StatisticallyPrevalentOriginalResponseCode>500</StatisticallyPrevalentOriginalResponseCode>
-<Confidence>High</Confidence>
-<DefenseBL>
-<DbId>BF45CDE9882A4E8589A91D0B547A4D7A</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseBL>
-<DefenseWL>
-<DbId>71F8C6C2C7944F0E958D51DD442E1AE4</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseWL>
-<AttackList>
-<Attack>
-<DbId>EE88F45897AB4A428869DCD0193DB031</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>HttpOnly Cookie</AttackId>
-<AttackValue></AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/saml/auth</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>PHPSESSID=c63cee5955c92edf04bf618784ad8151; path=/</AttackMatchedString>
-<AttackDescription></AttackDescription>
-<AttackConfigDescription>HttpOnly attribute not set</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue>PHPSESSID=c63cee5955c92edf04bf618784ad8151; path=/</OriginalValue>
-<OriginalResponseCode>500</OriginalResponseCode>
-</Attack>
-</AttackList>
-</Vuln>
-<Vuln>
-<DbId>A4FEC5575AF04AA69E4BDBA64E4D1836</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<ScanName>ExampleApplication</ScanName>
-<WebSite>https://test.example.com:443</WebSite>
-<WebSiteIP>1.2.3.4</WebSiteIP>
-<VulnType>SQL Injection</VulnType>
-<VulnUrl>https://test.example.com/index.php/welcome/login</VulnUrl>
-<NormalizedUrl>https://test.example.com/index.php/welcome/login?</NormalizedUrl>
-<MatchedString><![CDATA[SELECT parameter_name, parameter_value FROM utility_settings)");
-	console.log("     2  0.00109  0.00054  0.00053  0.00056    system.db.CDbCommand.query(SELECT user_id FROM mailing_token WHERE token = :token AND create_datetime >= CURDATE() - INTERVAL :age DAY. B]]></MatchedString>
-<NormalizedPostParams></NormalizedPostParams>
-<VulnParam>token</VulnParam>
-<ParameterName>token</ParameterName>
-<HtmlEntityAttacked>Query-Parameters</HtmlEntityAttacked>
-<ModuleId>B6F559D374B5451EB424A1C1FB264FA6</ModuleId>
-<AttackType>Single Quote (another)</AttackType>
-<AttackScore>4-High</AttackScore>
-<AttackValue>'</AttackValue>
-<OriginalValue></OriginalValue>
-<Method>GET</Method>
-<RootCauseId>2067FCEC9A567884B584CDCCFF0F2D5B</RootCauseId>
-<LuxorRootCauseId>CC0B7A3058208A72BEBA3526E9D3B2F1</LuxorRootCauseId>
-<FindingDbId>F60A9E2F8C7246D28B2098D3B91B3CFA</FindingDbId>
-<Description><![CDATA[A <a target="_blank" href="https://www.owasp.org/index.php/SQL_Injection">SQL injection</a> attack consists of insertion or "injection" of a SQL query via the input data from the client to the application. A successful SQL injection exploit can read sensitive data from the database, modify database data (Insert/Update/Delete), execute administration operations on the database (such as shutdown the DBMS), recover the content of a given file present on the DBMS file system and in some cases issue commands to the operating system. SQL injection attacks are a type of injection attack, in which SQL commands are injected into data-plane input in order to effect the execution of predefined SQL commands.
-<p>
-SQL injection errors occur when:
-<ol>
-<li>Data enters a program from an untrusted source.
-<li>The data used to dynamically construct a SQL query
-</ol>
-
-<p>
-<a target="_blank" href="https://www.owasp.org/index.php/SQL_Injection">SQL injection</a> has become a common issue with database-driven web sites. The flaw is easily detected, and easily exploited, and as such, any site or software package with even a minimal user base is likely to be subject to an attempted attack of this kind.
-<p>
-Essentially, the attack is accomplished by placing a meta character into data input to then place SQL commands in the control plane, which did not exist there before. This flaw depends on the fact that SQL makes no real distinction between the control and data planes.]]></Description>
-<Recommendation><![CDATA[
-<p> <a target="_blank" href="https://www.owasp.org/index.php/SQL_Injection_Prevention_Cheat_Sheet"> SQL Injection</a> flaws are introduced when software developers create dynamic database queries that include user supplied input.
-<p>
-Primary Defenses:
-<ul>
-<li>Use of Prepared Statements (Parameterized Queries)<p>
-Parameterized queries force the developer to first define all the SQL code, and then pass in each parameter to the query later. This coding style allows the database to distinguish between code and data, regardless of what user input is supplied.
-
-Prepared statements ensure that an attacker is not able to change the intent of a query, even if SQL commands are inserted by an attacker.
-
-<li>Use of Stored Procedures<p>
-
-Stored procedures have the same effect as the use of prepared statements when implemented safely* which is the norm for most stored procedure languages. They require the developer to just build SQL statements with parameters which are automatically parameterized unless the developer does something largely out of the norm. The difference between prepared statements and stored procedures is that the SQL code for a stored procedure is defined and stored in the database itself, and then called from the application. Both of these techniques have the same effectiveness in preventing SQL injection so your organization should choose which approach makes the most sense for you.
-
-<li>Escaping all User Supplied Input<p>
-
-This technique is to escape user input before putting it in a query. However, this methodology is frail compared to using parameterized queries and we cannot guarantee it will prevent all SQL Injection in all situations. This technique should only be used, with caution, to retrofit legacy code in a cost effective way. Applications built from scratch, or applications requiring low risk tolerance should be built or re-written using parameterized queries.<p>
-Each DBMS supports one or more character escaping schemes specific to certain kinds of queries. If you then escape all user supplied input using the proper escaping scheme for the database you are using, the DBMS will not confuse that input with SQL code written by the developer, thus avoiding any possible SQL injection vulnerabilities.
-
-Full details on <a target="_blank" href="https://www.owasp.org/index.php/ESAPI">ESAPI are available at OWASP.</a>
-
-</ul>
-Additional Defenses:
-<ul>
-<li>Least Privilege<p>
-
-To minimize the potential damage of a successful SQL injection attack, you should minimize the privileges assigned to every database account in your environment. Do not assign DBA or admin type access rights to your application accounts. We understand that this is easy, and everything just ‘works’ when you do it this way, but it is very dangerous. Start from the ground up to determine what access rights your application accounts require, rather than trying to figure out what access rights you need to take away. Make sure that accounts that only need read access are only granted read access to the tables they need access to. If an account only needs access to portions of a table, consider creating a view that limits access to that portion of the data and assigning the account access to the view instead, rather than the underlying table. Rarely, if ever, grant create or delete access to database accounts.
-
-<li>White List Input Validation<p>
-Input validation can be used to detect unauthorized input before it is passed to the SQL query. For more information please see the <a target="_blank" href="https://www.owasp.org/index.php/Input_Validation_Cheat_Sheet">OWASP Input Validation Cheat Sheet</a>. Proceed with caution here. Validated data is not necessarily safe to insert into SQL queries via string building. 
-</ul>
-</li>
-</ul>]]></Recommendation>
-<Page>https://test.example.com/index.php/welcome/login</Page>
-<Url>https://test.example.com/index.php/welcome/login</Url>
-<VulnParamType>unknown</VulnParamType>
-<CrawlTraffic>UE9TVCAvaW5kZXgucGhwL...</CrawlTraffic>
-<CrawlTrafficTemplate>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficTemplate>
-<CrawlTrafficResponse>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficResponse>
-<AttackClass>Database Administrator</AttackClass>
-<CweId>89</CweId>
-<CAPEC>66</CAPEC>
-<DISSA_ASC>3540</DISSA_ASC>
-<OWASP2007>2</OWASP2007>
-<OWASP2010>1</OWASP2010>
-<OWASP2013>1</OWASP2013>
-<OWASP2017>1</OWASP2017>
-<OVAL>1033</OVAL>
-<WASC>19</WASC>
-<ScanDate>2018-02-13 17:11:18</ScanDate>
-<ScanEnd>2018-02-13 23:19:31</ScanEnd>
-<StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
-<Confidence>High</Confidence>
-<DefenseBL>
-<DbId>BF45CDE9882A4E8589A91D0B547A4D7A</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva>sql-injection</Imperva>
-</DefenseBL>
-<DefenseWL>
-<DbId>71F8C6C2C7944F0E958D51DD442E1AE4</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseWL>
-<AttackList>
-<Attack>
-<DbId>1B348EDB646E4BAC8DC3AEF3D69EB17F</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>DBI01</AttackId>
-<AttackValue>'</AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/welcome/login</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString><![CDATA[SELECT user_id FROM mailing_token WHERE token = :token AND create_datetime >= CURDATE() - INTERVAL :age DAY. B]]></AttackMatchedString>
-<AttackDescription></AttackDescription>
-<AttackConfigDescription>Single Quote</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue></OriginalValue>
-<OriginalResponseCode>200</OriginalResponseCode>
-<AttackRequestList>
-<AttackRequest>
-<DbId>CA223AB450714EA3B0B90E33E35CC40B</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>UE9TVCAvaW5kZXgucGhwL...</Request>
-<Response>UE9TVCAvaW5kZXgucGhwL...</Response>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>3ABD934F2AA8436DA540726936DCCA24</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>DBI04</AttackId>
-<AttackValue>%27</AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/welcome/login</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString><![CDATA[SELECT parameter_name, parameter_value FROM utility_settings)");
-	console.log("     2  0.00112  0.00056  0.00053  0.00059    system.db.CDbCommand.query(SELECT user_id FROM mailing_token WHERE token = :token AND create_datetime >= CURDATE() - INTERVAL :age DAY. B]]></AttackMatchedString>
-<AttackDescription></AttackDescription>
-<AttackConfigDescription>Single Quote (ASCII)</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue></OriginalValue>
-<OriginalResponseCode>200</OriginalResponseCode>
-<AttackRequestList>
-<AttackRequest>
-<DbId>CDA87F5841444EF49A40BDCE4A60B6CA</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>UE9TVCAvaW5kZXgucGhwL...</Request>
-<Response>UE9TVCAvaW5kZXgucGhwL...</Response>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>6F6CBC98CC0145CA833F396126F2CAAB</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>DBI03</AttackId>
-<AttackValue>"</AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/welcome/login</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString><![CDATA[SELECT user_id FROM mailing_token WHERE token = :token AND create_datetime >= CURDATE() - INTERVAL :age DAY. B]]></AttackMatchedString>
-<AttackDescription></AttackDescription>
-<AttackConfigDescription>Double Quote</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue></OriginalValue>
-<OriginalResponseCode>200</OriginalResponseCode>
-<AttackRequestList>
-<AttackRequest>
-<DbId>4633C6133D8549CFB10BDD5ED278817B</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>UE9TVCAvaW5kZXgucGhwL...</Request>
-<Response>UE9TVCAvaW5kZXgucGhwL...</Response>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-<Attack>
-<DbId>4300A7F1B57143DFBC101398A2538788</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>DBI02</AttackId>
-<AttackValue>'</AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/welcome/login</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString><![CDATA[SELECT parameter_name, parameter_value FROM utility_settings)");
-	console.log("     2  0.00109  0.00054  0.00053  0.00056    system.db.CDbCommand.query(SELECT user_id FROM mailing_token WHERE token = :token AND create_datetime >= CURDATE() - INTERVAL :age DAY. B]]></AttackMatchedString>
-<AttackDescription></AttackDescription>
-<AttackConfigDescription>Single Quote (another)</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue></OriginalValue>
-<OriginalResponseCode>200</OriginalResponseCode>
-<AttackRequestList>
-<AttackRequest>
-<DbId>D2A030413A7243A2851F63A7FD00B711</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>UE9TVCAvaW5kZXgucGhwL...</Request>
-<Response>UE9TVCAvaW5kZXgucGhwL...</Response>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-</AttackList>
-</Vuln>
-<Vuln>
-<DbId>E6DEC0EFFEBA44CDAA0D904EF3FEC8CC</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<ScanName>ExampleApplication</ScanName>
-<WebSite>https://test.example.com:443</WebSite>
-<WebSiteIP>1.2.3.4</WebSiteIP>
-<VulnType>Session Fixation</VulnType>
-<VulnUrl>https://test.example.com/index.php/home/</VulnUrl>
-<NormalizedUrl>https://test.example.com/index.php/home/</NormalizedUrl>
-<MatchedString><![CDATA[HTTP/1.1 200 Found
-Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-Connection: close
-Date: Tue, 13 Feb 2018 22:34:37 GMT
-Pragma: no-cache
-Content-Length: 1308
-Content-Type: text/html; charset=UTF-8
-Expires: Thu, 19 Nov 1981 08:52:00 GMT
-Location: https://test.example.com/index.php/welcome
-Server: Apache]]></MatchedString>
-<NormalizedPostParams></NormalizedPostParams>
-<VulnParam></VulnParam>
-<ParameterName>N/A</ParameterName>
-<HtmlEntityAttacked>URL</HtmlEntityAttacked>
-<ModuleId>DB1340E1857540219DF84A6A9DC0494C</ModuleId>
-<AttackType>Server accepts fixed Session ID in a cookie</AttackType>
-<AttackScore>3-Medium</AttackScore>
-<AttackValue>N/A</AttackValue>
-<OriginalValue>N/A</OriginalValue>
-<Method>N/A</Method>
-<RootCauseId>6C086A28438414D284A0332287ECEEEE</RootCauseId>
-<LuxorRootCauseId>228DB0350A7A7EBDEFCD1F2DBCB2C3E4</LuxorRootCauseId>
-<FindingDbId>4179BE04D00B47ADB340FB5BA057CEF1</FindingDbId>
-<Description><![CDATA[<p>Session Fixation is an attack that permits an attacker to hijack a valid user session. It fits within the more general framework of attacks that exploit a violation of best practice where the server authenticates by changing (promoting) the authentication state of the session ID cookie value so it can continue to use the same cookie value.  Servers that accept session data in the URL or in POST data in particular are vulnerable.  The attack follows this pattern:</p><p><li>Attacker ascertains session ID name, value.  Either the server accepts anything or the attacker visits the site and snoops the response.</li><li>Attacker entices victim to visit the site with extra payload in the URL to the effect of "https://www.thesite.com/?SID=ascertained_value."</li><li>Victim logs in and that SID gets promoted.</li><li>Attacker now has authenticated access.</li></p>]]></Description>
-<Recommendation><![CDATA[<p>This attack can be largely avoided by changing the session ID when users log in.  Also, do NOT accept session ID's in GET or POST parameters; use HTTP cookies at the very least to encode session information.  These two rules of thumb establish a sufficient level of security for most applications. However, for those willing to incur further development and maintenance effort for higher security, the SID can be regenerated on a per-request basis and also, on systems that support it, SSL/TLS session identifiers may be used.</p>]]></Recommendation>
-<Page>https://test.example.com/index.php/home/</Page>
-<Url>https://test.example.com/index.php/home/</Url>
-<VulnParamType>unknown</VulnParamType>
-<CrawlTraffic>UE9TVCAvaW5kZXgucGhwL...</CrawlTraffic>
-<CrawlTrafficTemplate>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficTemplate>
-<CrawlTrafficResponse>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficResponse>
-<AttackClass>Application Developer</AttackClass>
-<CweId>384</CweId>
-<CAPEC>61</CAPEC>
-<DISSA_ASC>3405</DISSA_ASC>
-<OWASP2007>7</OWASP2007>
-<OWASP2010>3</OWASP2010>
-<OWASP2013>2</OWASP2013>
-<OWASP2017>2</OWASP2017>
-<OVAL>0</OVAL>
-<WASC>0</WASC>
-<ScanDate>2018-02-13 17:11:18</ScanDate>
-<ScanEnd>2018-02-13 23:19:31</ScanEnd>
-<StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
-<Confidence>Medium</Confidence>
-<DefenseBL>
-<DbId>BF45CDE9882A4E8589A91D0B547A4D7A</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseBL>
-<DefenseWL>
-<DbId>71F8C6C2C7944F0E958D51DD442E1AE4</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
-<PcreRegex></PcreRegex>
-<ModSecurity></ModSecurity>
-<Snort></Snort>
-<Imperva></Imperva>
-</DefenseWL>
-<AttackList>
-<Attack>
-<DbId>647ECE854A644BF0A9718628004D8C66</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>SessionFixation_01</AttackId>
-<AttackValue>PHPSESSID=x7oo3ugk;a64b84d4419675c8425cb15c2f5fda28=</AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/home/</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString><![CDATA[HTTP/1.1 302 Found
-Cache-Control: no-store, no-cache, must-revalidate, post-check=0, pre-check=0
-Connection: close
-Date: Tue, 13 Feb 2018 22:34:37 GMT
-Pragma: no-cache
-Content-Length: 1308
-Content-Type: text/html; charset=UTF-8
-Expires: Thu, 19 Nov 1981 08:52:00 GMT
-Location: https://test.example.com/index.php/welcome
-Server: Apache]]></AttackMatchedString>
-<AttackDescription>Server failed to issue new session cookie.</AttackDescription>
-<AttackConfigDescription>Server accepts fixed Session ID in a cookie</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue>e5cjqtoj0kgqejt2f1hhmst8p5</OriginalValue>
-<OriginalResponseCode>200</OriginalResponseCode>
-<AttackRequestList>
-<AttackRequest>
-<DbId>3B30A07B5AF240DEB9D1AD1D31E191C0</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<Request>UE9TVCAvaW5kZXgucGhwL...==</Request>
-<Response>UE9TVCAvaW5kZXgucGhwL...</Response>
-<Benign>0</Benign>
-</AttackRequest>
-</AttackRequestList>
-</Attack>
-</AttackList>
-</Vuln>
-<Vuln>
-<DbId>54F51B5E593B40268E5389666F2F1C2F</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<ScanName>ExampleApplication</ScanName>
-<WebSite>https://test.example.com:443</WebSite>
-<WebSiteIP>1.2.3.4</WebSiteIP>
-<VulnType>Form re-submission</VulnType>
-<VulnUrl>https://test.example.com/index.php/logout/login</VulnUrl>
-<NormalizedUrl>https://test.example.com/index.php/logout/login</NormalizedUrl>
-<MatchedString>HTTP/1.1 200 OK</MatchedString>
-<NormalizedPostParams></NormalizedPostParams>
-<VulnParam></VulnParam>
-<ParameterName>N/A</ParameterName>
-<HtmlEntityAttacked>URL</HtmlEntityAttacked>
-<ModuleId>FD28B5D41E064D37B5543CE22BBC6306</ModuleId>
-<AttackType>Form re-submissions from Browser Cache</AttackType>
-<AttackScore>2-Low</AttackScore>
-<AttackValue>N/A</AttackValue>
-<OriginalValue>N/A</OriginalValue>
-<Method>N/A</Method>
-<RootCauseId>9C87C885FBA212F155CF80BDFC4A0BA3</RootCauseId>
-<LuxorRootCauseId>5E763DEC0CC863D357C3EA8CD0735778</LuxorRootCauseId>
-<FindingDbId>833A3F9F5C7D482F97063DFCD2BDB4EB</FindingDbId>
-<Description><![CDATA[<p>When a web form is submitted to a server through an HTTP POST request, a web user that attempts to refresh the server response in certain user agents can cause the contents of the original HTTP POST request to be resubmitted, possibly causing undesired results, such as a duplicate web purchase.</p>]]></Description>
-<Recommendation><![CDATA[<p>To avoid this problem, many web developers use the PRG pattern - instead of returning a web page directly, the POST operation returns a redirection command.<br/>
-        Post/Redirect/Get (PRG) is a web development design pattern that prevents some duplicate form submissions, creating a more intuitive interface for user agents (users). PRG implements bookmarks and the refresh button in a predictable way that does not create duplicate form submissions.</p>]]></Recommendation>
-<Page>https://test.example.com/index.php/logout/login</Page>
-<Url>https://test.example.com/index.php/logout/login</Url>
-<VulnParamType>unknown</VulnParamType>
-<CrawlTraffic>UE9TVCAvaW5kZXgucGhwL...</CrawlTraffic>
-<CrawlTrafficTemplate>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficTemplate>
-<CrawlTrafficResponse>UE9TVCAvaW5kZXgucGhwL...</CrawlTrafficResponse>
+<CrawlTraffic>R0VUIC9jc3Mvc3R5bGUuY3NzIEhUVFAvMS4xDQpIb3N0OiB3d3cud2Vic2NhbnRlc3QuY29tDQpQcm94eS1Db25uZWN0aW9uOiBrZWVwLWFsaXZlDQpBY2NlcHQ6IHRleHQvY3NzLCovKjtxPTAuMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4yOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcyLjAuMzYyNi45NiBTYWZhcmkvNTM3LjM2DQpSZWZlcmVyOiBodHRwOi8vd3d3LndlYnNjYW50ZXN0LmNvbS9sb2dpbi5waHANCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUyxlbjtxPTAuOQ0KQ29va2llOiBURVNUX1NFU1NJT05JRD1qcmdrMGpwOG1tZHBpZXRzZ2s0OWMyZ283NjsgTkJfU1JWSUQ9c3J2MTQwNzE3DQoNCg==</CrawlTraffic>
+<CrawlTrafficTemplate>R0VUIC9jc3Mvc3R5bGUuY3NzIEhUVFAvMS4xDQpIb3N0OiB3d3cud2Vic2NhbnRlc3QuY29tDQpQcm94eS1Db25uZWN0aW9uOiBrZWVwLWFsaXZlDQpBY2NlcHQ6IHRleHQvY3NzLCovKjtxPTAuMQ0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4yOyBXT1c2NCkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzcyLjAuMzYyNi45NiBTYWZhcmkvNTM3LjM2DQpSZWZlcmVyOiBodHRwOi8vd3d3LndlYnNjYW50ZXN0LmNvbS9sb2dpbi5waHANCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUyxlbjtxPTAuOQ0KQ29va2llOiBURVNUX1NFU1NJT05JRD1qcmdrMGpwOG1tZHBpZXRzZ2s0OWMyZ283NjsgTkJfU1JWSUQ9c3J2MTQwNzE3DQoNCg==</CrawlTrafficTemplate>
+<CrawlTrafficResponse>SFRUUC8xLjEgMjAwIE9LDQpDb25uZWN0aW9uOiBjbG9zZQ0KRGF0ZTogV2VkLCAyNSBTZXAgMjAxOSAwODo0MDoyMCBHTVQNCkNvbnRlbnQtTGVuZ3RoOiAyNzA2DQpDb250ZW50LVR5cGU6IHRleHQvY3NzDQpDb250ZW50LUVuY29kaW5nOiBnemlwDQpMYXN0LU1vZGlmaWVkOiBNb24sIDIxIERlYyAyMDE1IDIzOjM1OjQ2IEdNVA0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkVUYWc6ICIyNzdlLTUyNzcwZjJjNWRjOWYtZ3ppcCINClNlcnZlcjogQXBhY2hlLzIuNC43IChVYnVudHUpDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNCg0KLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCUlNUE9SVFMKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qLwpAaW1wb3J0IHVybChzdHlsZS1idXR0b25zLmNzcyk7CkBpbXBvcnQgdXJsKHN0eWxlLWZvcm1zLmNzcyk7CgoKZmllbGRzZXQgZGl2ewogICAgcGFkZGluZzogM3B4Owp9CgovKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoJSFRNTCBFTEVNRU5UUwotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovCip7Ci13ZWJraXQtYm94LXNpemluZzogYm9yZGVyLWJveDsgLyogU2FmYXJpL0Nocm9tZSwgb3RoZXIgV2ViS2l0ICovCi1tb3otYm94LXNpemluZzogYm9yZGVyLWJveDsgICAgLyogRmlyZWZveCwgb3RoZXIgR2Vja28gKi8KYm94LXNpemluZzogYm9yZGVyLWJveDsgICAgICAgICAvKiBPcGVyYS9JRSA4KyAqLwkKfQphe2NvbG9yOiM0RDk5RTA7b3V0bGluZTowOyBwYWRkaW5nOjVweDsgZGlzcGxheTppbmxpbmUtYmxvY2s7fQphOmFjdGl2ZXtjb2xvcjppbmhlcml0O30KYTp2aXNpdGVke2NvbG9yOmdyZXk7fQphOmhvdmVye30KYSBpbWd7Ym9yZGVyOjA7fQphIFtjbGFzc149Imljb24tIl17Y29sb3I6aW5oZXJpdDt0ZXh0LWRlY29yYXRpb246bm9uZTt9CnN0cm9uZyxie2NvbG9yOiMwMDA7Zm9udC13ZWlnaHQ6Ym9sZDt9CnN0cmlrZXt9CmVtLGl7fQouaGlkZXtkaXNwbGF5Om5vbmU7fQouc2hvd3tkaXNwbGF5OmJsb2NrO30KCi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCglVVElMSVRZCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi8KLmNlbnRlcnt0ZXh0LWFsaWduOmNlbnRlcjt9Ci5sZWZ0e3RleHQtYWxpZ246bGVmdDt9Ci5yaWdodHt0ZXh0LWFsaWduOnJpZ2h0O30KCi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCglIUgotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovCmhye2NsZWFyOmJvdGg7Ym9yZGVyLWJvdHRvbTowO2JvcmRlci10b3A6MXB4IGRvdHRlZCAjY2NjO2JvcmRlci1yaWdodDowO2JvcmRlci1sZWZ0OjA7bWFyZ2luOjMwcHggMDttaW4taGVpZ2h0OiAwcHg7aGVpZ2h0OjFweDt9CmhyLmFsdDF7Ym9yZGVyLXN0eWxlOiBzb2xpZDt9CmhyLmFsdDJ7Ym9yZGVyLXN0eWxlOiBkYXNoZWQ7fQoKLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCUhUTUw1IEVMRU1FTlRTIChzaGltKQotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovCmFydGljbGUsYXNpZGUsZGV0YWlscyxmaWdjYXB0aW9uLGZpZ3VyZSwKZm9vdGVyLGhlYWRlcixoZ3JvdXAsbWVudSxuYXYsc2VjdGlvbiB7CmRpc3BsYXk6YmxvY2s7Cn0KCi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCglIRUFESU5HUwotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovCmgxLGgyLGgzLGg0LGg1LGg2ewpmb250LXdlaWdodDpib2xkOwpsaW5lLWhlaWdodDoxNDAlOwp9CgpoMXsKZm9udC1zaXplOjIuNWVtOwptYXJnaW46MTBweCAwIDEwcHggMDsKfQoKaDJ7CmZvbnQtc2l6ZToyZW07Cm1hcmdpbjoxMHB4IDAgMTBweCAwOwp9CgpoM3sKZm9udC1zaXplOjEuNWVtOwptYXJnaW46MTBweCAwIDEwcHggMDsKbGluZS1oZWlnaHQ6MTMwJTsKfQoKaDR7CmZvbnQtc2l6ZToxZW07Cm1hcmdpbjoxMHB4IDAgMTBweCAwOwp9CgpoNXsKZm9udC1zaXplOjFlbTsKbWFyZ2luOjEwcHggMCAxMHB4IDA7Cn0KCmg2ewpmb250LXNpemU6MS4yZW07Cm1hcmdpbjoxMHB4IDAgNXB4IDA7Cn0KCi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCglQQVJBR1JBUEhTCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi8KcHsKbWFyZ2luOjEwcHggMDsKfQoKLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCUJMT0NLUVVPVEVTCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi8KYmxvY2txdW90ZXsKZm9udC1zaXplOjEuNWVtOwpsaW5lLWhlaWdodDoxLjVlbTsKZm9udC1zdHlsZTogaXRhbGljOwptYXJnaW46MzBweCAzMHB4IDMwcHggMDsKcGFkZGluZzowIDAgMCAyMHB4Owpib3JkZXItbGVmdDoxcHggc29saWQgI2NjYzsKfQoKCWJsb2NrcXVvdGUgc3Bhbntmb250LXNpemU6MC43ZW07ZGlzcGxheTpibG9jazt9CglibG9ja3F1b3RlLnNtYWxse2ZvbnQtc2l6ZToxLjJlbTt9CgkKLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCUxJU1RTCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi8KdWwsIG9sewpwYWRkaW5nOjA7Cm1hcmdpbjowIDAgMjBweCAyNXB4Owp9CgoJbGl7CglwYWRkaW5nOjVweCAwOwoJbWFyZ2luOjA7Cgl9Cgp1bC5hbHR7CnBhZGRpbmc6MDsKbWFyZ2luOjAgMCAyMHB4IDA7Cn0KCgl1bC5hbHQgbGl7CglsaXN0LXN0eWxlLXR5cGU6bm9uZTsKCWJvcmRlci10b3A6MXB4IGRvdHRlZCAjY2NjOwoJYm9yZGVyLWJvdHRvbToxcHggZG90dGVkICNjY2M7CgltYXJnaW46MCAwIC0xcHggMDsKCWJhY2tncm91bmQ6dXJsKGltZy9pY29uLWFycm93LXJpZ2h0LnBuZykgbm8tcmVwZWF0IDVweCAwLjdlbTsKCXBhZGRpbmctbGVmdDoyMHB4OwoJfQoJCi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCglQUkUgJiBDT0RFCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi8KY29kZXsKZm9udC1mYW1pbHk6IENvbnNvbGFzLCAiQW5kYWxlIE1vbm8gV1QiLCAiQW5kYWxlIE1vbm8iLCAiTHVjaWRhIENvbnNvbGUiLCAiTHVjaWRhIFNhbnMgVHlwZXdyaXRlciIsICJEZWphVnUgU2FucyBNb25vIiwgIkJpdHN0cmVhbSBWZXJhIFNhbnMgTW9ubyIsICJMaWJlcmF0aW9uIE1vbm8iLCAiTmltYnVzIE1vbm8gTCIsIE1vbmFjbywgIkNvdXJpZXIgTmV3IiwgQ291cmllciwgbW9ub3NwYWNlOwpmb250LXNpemU6MC45ZW07CmJvcmRlcjoxcHggc29saWQgbGlnaHRibHVlOwpwYWRkaW5nOjNweDsKLW1vei1ib3JkZXItcmFkaXVzOjNweDsKLXdlYmtpdC1ib3JkZXItcmFkaXVzOjNweDsKYm9yZGVyLXJhZGl1czozcHg7CmNvbG9yOiM1MThCQUI7Cn0KCnByZXsKd2hpdGUtc3BhY2U6IHByZS13cmFwOyAgICAgICAvKiBjc3MtMyAqLwp3aGl0ZS1zcGFjZTogLW1vei1wcmUtd3JhcCAhaW1wb3J0YW50OyAgLyogTW96aWxsYSwgc2luY2UgMTk5OSAqLwp3aGl0ZS1zcGFjZTogLXByZS13cmFwOyAgICAgIC8qIE9wZXJhIDQtNiAqLwp3aGl0ZS1zcGFjZTogLW8tcHJlLXdyYXA7ICAgIC8qIE9wZXJhIDcgKi8Kd29yZC13cmFwOiBicmVhay13b3JkOyAgICAgICAvKiBJbnRlcm5ldCBFeHBsb3JlciA1LjUrICovCm1hcmdpbjogMHB4IDBweCAwcHggMHB4OwpwYWRkaW5nOjVweCA1cHggM3B4IDVweDsKYmFja2dyb3VuZDojZmZmOwotbW96LWJvcmRlci1yYWRpdXM6NXB4Owotd2Via2l0LWJvcmRlci1yYWRpdXM6NXB4Owpib3JkZXItcmFkaXVzOjVweDsKLXdlYmtpdC1ib3gtc2hhZG93Omluc2V0IDBweCAwcHggN3B4IHJnYmEoMCwwLDAsMC4yKTsKLW1vei1ib3gtc2hhZG93Omluc2V0IDBweCAwcHggN3B4IHJnYmEoMCwwLDAsMC4yKTsKYm94LXNoYWRvdzppbnNldCAwcHggMHB4IDdweCByZ2JhKDAsMCwwLDAuMik7CnBhZGRpbmc6MTBweDsKbWFyZ2luOjAgMDsKYm9yZGVyOjFweCBzb2xpZCAjZGRkOwpmb250LWZhbWlseTogQ29uc29sYXMsICJBbmRhbGUgTW9ubyBXVCIsICJBbmRhbGUgTW9ubyIsICJMdWNpZGEgQ29uc29sZSIsICJMdWNpZGEgU2FucyBUeXBld3JpdGVyIiwgIkRlamFWdSBTYW5zIE1vbm8iLCAiQml0c3RyZWFtIFZlcmEgU2FucyBNb25vIiwgIkxpYmVyYXRpb24gTW9ubyIsICJOaW1idXMgTW9ubyBMIiwgTW9uYWNvLCAiQ291cmllciBOZXciLCBDb3VyaWVyLCBtb25vc3BhY2U7CmZvbnQtc2l6ZTowLjllbTsKfQoKLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCVRBQkxFUwotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovCnRhYmxlewogICAgd2lkdGg6ODAlOwogICAgYm9yZGVyOm5vbmU7IAogICAgdGV4dC1hbGlnbjpsZWZ0OwogICAgYm9yZGVyLWNvbGxhcHNlOiBzZXBhcmF0ZTsKICAgIGJvcmRlci1zcGFjaW5nOiAwOwp9Cgl0aGVhZCwgdGJvZHl7bWFyZ2luOjA7cGFkZGluZzowO30KCXRoLCB0ZHtwYWRkaW5nOjdweCAxMHB4O2ZvbnQtc2l6ZTowLjllbTt0ZXh0LWFsaWduOmxlZnQ7fQoJdGhlYWQgdGh7Zm9udC1zaXplOjAuOWVtO3BhZGRpbmc6M3B4IDEwcHg7fQoJdGJvZHkgdHIubGFzdCB0aCwKCXRib2R5IHRyLmxhc3QgdGR7Ym9yZGVyLWJvdHRvbTowO30KCQoKdGFibGUsIHRkIHsKCiAgICBib3JkZXItcmFkaXVzOiAyMHB4OwogICAgLW1vei1ib3JkZXItcmFkaXVzOiA1cHg7CiAgICBwYWRkaW5nOiA1cHg7CiAgICBib3JkZXI6bm9uZTsKfQogICAgICAgIAovKiBzdHJpcGVkICovCnRhYmxlLnN0cmlwZWR7fQoJdGFibGUuc3RyaXBlZCB0ci5hbHR7YmFja2dyb3VuZDojZjVmNWY1O30KCXRhYmxlLnN0cmlwZWQgdGhlYWQgdGh7YmFja2dyb3VuZDojZmZmO30KCXRhYmxlLnN0cmlwZWQgdGJvZHkgdGh7YmFja2dyb3VuZDojZjVmNWY1O3RleHQtYWxpZ246cmlnaHQ7cGFkZGluZy1yaWdodDoxNXB4O2JvcmRlci1yaWdodDoxcHggZG90dGVkICNlNWU1ZTU7fQoJdGFibGUuc3RyaXBlZCB0Ym9keSB0ci5hbHQgdGh7YmFja2dyb3VuZDojZWZlZmVmO30KCi8qIHRpZ2h0ICovCnRhYmxlLnRpZ2h0e30KCXRhYmxlLnRpZ2h0IHRoLCAudGlnaHQgdGR7cGFkZGluZzoycHggMTBweDt9CgovKiBzb3J0YWJsZSAqLwp0YWJsZS5zb3J0YWJsZXtib3JkZXI6MXB4IHNvbGlkICNkZGQ7fQoJdGFibGUuc29ydGFibGUgdGhlYWQgdGh7Y3Vyc29yOiBwb2ludGVyO3Bvc2l0aW9uOnJlbGF0aXZlO3RvcDowO2xlZnQ6MDtib3JkZXItcmlnaHQ6MXB4IHNvbGlkICNkZGQ7fQoJdGFibGUuc29ydGFibGUgdGhlYWQgdGg6aG92ZXJ7YmFja2dyb3VuZDojZWZlZmVmO30KCXRhYmxlLnNvcnRhYmxlIHNwYW4uYXJyb3d7Ym9yZGVyLXN0eWxlOnNvbGlkO2JvcmRlci13aWR0aDo1cHg7CglkaXNwbGF5OmJsb2NrO3Bvc2l0aW9uOmFic29sdXRlO3RvcDo1MCU7cmlnaHQ6NXB4O2ZvbnQtc2l6ZTowOwoJYm9yZGVyLWNvbG9yOiNjY2MgdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQgdHJhbnNwYXJlbnQ7CglsaW5lLWhlaWdodDowO2hlaWdodDowO3dpZHRoOjA7bWFyZ2luLXRvcDotMnB4O30KCXRhYmxlLnNvcnRhYmxlIHNwYW4uYXJyb3cudXB7Ym9yZGVyLWNvbG9yOnRyYW5zcGFyZW50IHRyYW5zcGFyZW50ICNjY2MgdHJhbnNwYXJlbnQ7bWFyZ2luLXRvcDotN3B4O30KCi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCglUQUJTCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi8KdWwudGFic3sKbWFyZ2luOjEwcHggMCAtMXB4IDA7CnBhZGRpbmc6MDsKd2lkdGg6MTAwJTsKYm9yZGVyLWJvdHRvbToxcHggc29saWQgI2U1ZTVlNTsKZmxvYXQ6bGVmdDsKZm9udC1zaXplOjA7Cn0KCgl1bC50YWJzLmxlZnR7dGV4dC1hbGlnbjpsZWZ0O30KCXVsLnRhYnMuY2VudGVye3RleHQtYWxpZ246Y2VudGVyO30KCXVsLnRhYnMucmlnaHR7dGV4dC1hbGlnbjpyaWdodDt9Cgl1bC50YWJzLnJpZ2h0IGxpe21hcmdpbjowIDAgMCAtMnB4O30KCgl1bC50YWJzIGxpewoJZm9udC1zaXplOjE0cHg7CglsaXN0LXN0eWxlLXR5cGU6bm9uZTsKCW1hcmdpbjowIC0ycHggMCAwOwoJcGFkZGluZzowOwoJZGlzcGxheTppbmxpbmUtYmxvY2s7CgkqZGlzcGxheTppbmxpbmU7LypJRSBPTkxZKi8KCXBvc2l0aW9uOnJlbGF0aXZlOwoJdG9wOjA7CglsZWZ0OjA7CgkqdG9wOjFweDsvKklFIDcgT05MWSovCgl6b29tOjE7Cgl9CgkKCXVsLnRhYnMgbGkgYXsKCXRleHQtZGVjb3JhdGlvbjpub25lOwoJY29sb3I6IzY2NjsKCWRpc3BsYXk6aW5saW5lLWJsb2NrOwoJcGFkZGluZzo5cHggMTVweDsKCXBvc2l0aW9uOiByZWxhdGl2ZTsKCXRvcDowOwoJbGVmdDowOwoJbGluZS1oZWlnaHQ6MTAwJTsKCWJhY2tncm91bmQ6I2Y1ZjVmNTsKCS13ZWJraXQtYm94LXNoYWRvdzogaW5zZXQgMHB4IC0zcHggM3B4IHJnYmEoMCwwLDAsMC4wMyk7CgktbW96LWJveC1zaGFkb3c6IGluc2V0IDBweCAtM3B4IDNweCByZ2JhKDAsMCwwLDAuMDMpOwoJYm94LXNoYWRvdzogaW5zZXQgMHB4IC0zcHggM3B4IHJnYmEoMCwwLDAsMC4wMyk7Cglib3JkZXI6MXB4IHNvbGlkICNlNWU1ZTU7Cglib3JkZXItYm90dG9tOjA7Cglmb250LXNpemU6MC45ZW07Cgl6b29tOjE7Cgl9CgkKCXVsLnRhYnMgbGkgYTpob3ZlcnsKCWJhY2tncm91bmQ6I2ZmZjsKCX0KCQoJdWwudGFicyBsaS5jdXJyZW50IGF7Cglwb3NpdGlvbjpyZWxhdGl2ZTsKCXRvcDoxcHg7CglsZWZ0OjA7CgliYWNrZ3JvdW5kOiNmZmY7Cgktd2Via2l0LWJveC1zaGFkb3c6IG5vbmU7CgktbW96LWJveC1zaGFkb3c6IG5vbmU7Cglib3gtc2hhZG93OiBub25lOwoJY29sb3I6IzIyMjsKCX0KCQoJLnRhYi1jb250ZW50ewoJYm9yZGVyOjFweCBzb2xpZCAjZWZlZmVmOwoJYm9yZGVyOjFweCBzb2xpZCAjZTVlNWU1OwoJYmFja2dyb3VuZDojZmZmOwoJY2xlYXI6Ym90aDsKCXBhZGRpbmc6MjBweDsKCW1hcmdpbjowIDAgNDBweCAwOwoJfQoJCgovKi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLQoJQlJFQURDUlVNQlMKLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0qLwp1bC5icmVhZGNydW1ic3sKbWFyZ2luOjEwcHggMDsKcGFkZGluZzowOwpsaW5lLWhlaWdodDowJTsKZm9udC1zaXplOjA7Cn0KCgl1bC5icmVhZGNydW1icyBsaXsKCWxpc3Qtc3R5bGUtdHlwZTpub25lOwoJbWFyZ2luOjA7CglwYWRkaW5nOjA7CglkaXNwbGF5OmlubGluZS1ibG9jazsKCSpkaXNwbGF5OmlubGluZTsgLyogSUUgT05MWSovCglwb3NpdGlvbjpyZWxhdGl2ZTsKCXpvb206MTsKCWxpbmUtaGVpZ2h0OjEwMCU7Cglmb250LXNpemU6MTRweDsgLyogMC44ZW0gZGVmYXVsdCB0byBvdmVycmlkZSBmb250LXNpemU6MDsgb24gcGFyZW50Ki8KCX0KCQoJdWwuYnJlYWRjcnVtYnMgbGkgYXsKCWRpc3BsYXk6aW5saW5lLWJsb2NrOwoJKmRpc3BsYXk6aW5saW5lOyAvKiBJRSBPTkxZKi8KCXBvc2l0aW9uOnJlbGF0aXZlOwoJcGFkZGluZzo1cHggMTVweCA1cHggNXB4OwoJZm9udC1zaXplOjAuOWVtOwoJem9vbToxOwoJbWFyZ2luOjA7CgliYWNrZ3JvdW5kOnVybChpbWcvaWNvbi1hcnJvdy1yaWdodC5wbmcpIG5vLXJlcGVhdCByaWdodCBjZW50ZXI7Cgl9CgkKCXVsLmJyZWFkY3J1bWJzIGxpLmxhc3QgYXsKCWNvbG9yOiMzMzM7CgljdXJzb3I6IGRlZmF1bHQ7Cgl0ZXh0LWRlY29yYXRpb246bm9uZTsKCWJhY2tncm91bmQ6bm9uZTsKCX0KCQoJdWwuYnJlYWRjcnVtYnMgbGkubGFzdCBhOmhvdmVyewoJdGV4dC1kZWNvcmF0aW9uOm5vbmU7Cgl9CgkKCS8qIEFsdGVybmF0aXZlIFN0eWxlICovCgl1bC5icmVhZGNydW1icy5hbHQxewoJYm9yZGVyOjFweCBzb2xpZCB0cmFuc3BhcmVudDsKCWZvbnQtc2l6ZTowOwoJfQoJCgl1bC5icmVhZGNydW1icy5hbHQxIGxpIGF7CglwYWRkaW5nOjEwcHggMjVweCAxMHB4IDE1cHg7CgliYWNrZ3JvdW5kOnVybChpbWcvYnJlYWRjcnVtYnMtYmcuZ2lmKSBuby1yZXBlYXQgcmlnaHQgY2VudGVyOwoJdGV4dC1kZWNvcmF0aW9uOm5vbmU7Cglib3JkZXItdG9wOjFweCBzb2xpZCAjZWZlZmVmOwoJYm9yZGVyLWJvdHRvbToxcHggc29saWQgI2VmZWZlZjsKCWZvbnQtc2l6ZToxMnB4OwoJfQoJCgl1bC5icmVhZGNydW1icy5hbHQxIGE6aG92ZXJ7Cgl0ZXh0LWRlY29yYXRpb246dW5kZXJsaW5lOwoJfQoJCgl1bC5icmVhZGNydW1icy5hbHQxIGxpLmZpcnN0IGF7Cglib3JkZXItbGVmdDoxcHggc29saWQgI2VmZWZlZjsKCX0KCQoJdWwuYnJlYWRjcnVtYnMuYWx0MSBsaS5sYXN0IGF7CgliYWNrZ3JvdW5kOm5vbmU7Cglib3JkZXItcmlnaHQ6MXB4IHNvbGlkICNlZmVmZWY7Cgl9CgkKLyotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0KCUlNQUdFUwotLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLSovCgppbWd7Cm1hcmdpbjowOwpwYWRkaW5nOjA7CmRpc3BsYXk6aW5saW5lLWJsb2NrOwpwb3NpdGlvbjpyZWxhdGl2ZTsKem9vbToxOwp2ZXJ0aWNhbC1hbGlnbjogYm90dG9tOwp9CgoJaW1nLmFsaWduLWxlZnQsIC5pbWctd3JhcC5hbGlnbi1sZWZ0e2Zsb2F0OmxlZnQ7bWFyZ2luOjAgMTBweCA1cHggMDt9CglpbWcuYWxpZ24tcmlnaHQsIC5pbWctd3JhcC5hbGlnbi1yaWdodHtmbG9hdDpyaWdodDttYXJnaW46MCAwIDVweCAxMHB4O30KCWltZy5mdWxsLXdpZHRoe2NsZWFyOmJvdGg7ZGlzcGxheTpibG9jazt3aWR0aDoxMDAlO2hlaWdodDphdXRvO21hcmdpbjowIDAgMTBweCAwO30KCQkKCWRpdi5jYXB0aW9uewoJYmFja2dyb3VuZDojZjVmNWY1OwoJYm9yZGVyOjFweCBzb2xpZCAjZGRkOwoJcGFkZGluZzozcHg7CgltYXgtd2lkdGg6MTAwJTsKCWRpc3BsYXk6aW5saW5lLWJsb2NrOwoJaGVpZ2h0OmF1dG87Cgl9CgkKCQlkaXYuY2FwdGlvbiBpbWd7CgkJZGlzcGxheTpibG9jazsKCQlwYWRkaW5nOjA7CgkJbWFyZ2luOjA7CgkJd2lkdGg6MTAwJTsKCQloZWlnaHQ6YXV0bzsKCQl9CgkKCQlkaXYuY2FwdGlvbiBzcGFuewoJCWRpc3BsYXk6YmxvY2s7CgkJbWFyZ2luLXRvcDozcHg7CgkJZm9udC1zaXplOjAuOGVtOwoJCWNvbG9yOiM2NjY7CgkJcGFkZGluZzowcHggNXB4OwoJCX0KCQkKCS5nYWxsZXJ5e30KCQoJCS5nYWxsZXJ5IGF7CgkJZGlzcGxheTppbmxpbmUtYmxvY2s7CgkJcG9zaXRpb246cmVsYXRpdmU7CgkJYm9yZGVyOjFweCBzb2xpZCAjZGRkOwoJCWJhY2tncm91bmQ6I2ZmZjsKCQlwYWRkaW5nOjNweDsKCQltYXJnaW46NXB4OwoJCS1tb3otYm9yZGVyLXJhZGl1czo1cHg7CgkJLXdlYmtpdC1ib3JkZXItcmFkaXVzOjVweDsKCQlib3JkZXItcmFkaXVzOjVweDsKCQl9CgkJCgkJLmdhbGxlcnkgYSBpbWd7CgkJZGlzcGxheTogYmxvY2s7CgkJcG9zaXRpb246IHJlbGF0aXZlOwoJCW1hcmdpbjowOwoJCXBhZGRpbmc6MDsKCQl9CgkJCi8qLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tCglTTElERVNIT1cyCi0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tKi8KLnNsaWRlc2hvdy13cmFwewpjbGVhcjpib3RoOwptYXJnaW46MDsKcGFkZGluZzowOwpwb3NpdGlvbjpyZWxhdGl2ZTsKdG9wOjA7CmxlZnQ6MDsKb3ZlcmZsb3c6aGlkZGVuOwpjbGVhcjpib3RoOwp9CgoJLnNsaWRlc2hvdy1pbm5lcnsKCW92ZXJmbG93OmhpZGRlbjsKCWNsZWFyOmJvdGg7Cglwb3NpdGlvbjpyZWxhdGl2ZTsKCXRvcDowOwoJbGVmdDowOwoJYm9yZGVyOjFweCBzb2xpZCAjZWZlZmVmOwoJfQoJCgkuc2xpZGVzaG93ewoJY2xlYXI6Ym90aDsKCW1hcmdpbjowOwoJcGFkZGluZzowOwoJd2lkdGg6YXV0bzsKCWhlaWdodDphdXRvOwoJb3ZlcmZsb3c6aGlkZGVuOwoJfQoJCgkJLnNsaWRlc2hvdyBsaXsKCQlsaXN0LXN0eWxlLXR5cGU6bm9uZTsKCQltYXJnaW46MDsKCQlwYWRkaW5nOjA7CgkJZmxvYXQ6bGVmdDsKCQlkaXNwbGF5OmJsb2NrOwoJCX0KCQkKCQkJLnNsaWRlc2hvdyBpbWd7dmVydGljYWwtYWxpZ246IGJvdHRvbTt9CgkJCQoJLnNsaWRlc2hvdy1idXR0b25zewoJdGV4dC1hbGlnbjpyaWdodDsKCW1hcmdpbjozcHggMCAwIDA7CglwYWRkaW5nOjA7Cgl9CgkKCQkuc2xpZGVzaG93LWJ1dHRvbnMgbGl7ZGlzcGxheTppbmxpbmU7cG9zaXRpb246cmVsYXRpdmU7dG9wOjA7bGVmdDowO2xpbmUtaGVpZ2h0OjEwMCU7bWFyZ2luOjA7cGFkZGluZzowO30KCQkuc2xpZGVzaG93LWJ1dHRvbnMgbGkuY3VycmVudCBhe2JhY2tncm91bmQ6I2RkZDt9CgkJCgkJLnNsaWRlc2hvdy1idXR0b25zIGF7CgkJZGlzcGxheTppbmxpbmU7CgkJcG9zaXRpb246cmVsYXRpdmU7CgkJdG9wOjA7CgkJbGVmdDowOwoJCXBhZGRpbmc6MXB4IDNweDsKCQltYXJnaW46MCAxcHg7CgkJbGluZS1oZWlnaHQ6MTAwJTsKCQlib3JkZXI6MXB4IHNvbGlkICNlZmVmZWY7CgkJdGV4dC1kZWNvcmF0aW9uOm5vbmU7CgkJZm9udC1zaXplOjAuOGVtOwoJCX0K</CrawlTrafficResponse>
 <AttackClass>Best Practice</AttackClass>
-<CweId>319</CweId>
+<CweId>0</CweId>
 <CAPEC>0</CAPEC>
-<DISSA_ASC>3250</DISSA_ASC>
-<OWASP2007>9</OWASP2007>
-<OWASP2010>9</OWASP2010>
-<OWASP2013>6</OWASP2013>
-<OWASP2017>6</OWASP2017>
+<DISSA_ASC>0</DISSA_ASC>
+<OWASP2007>0</OWASP2007>
+<OWASP2010>0</OWASP2010>
+<OWASP2013>0</OWASP2013>
+<OWASP2017>0</OWASP2017>
+<GDPR2016>0</GDPR2016>
 <OVAL>0</OVAL>
 <WASC>0</WASC>
-<ScanDate>2018-02-13 17:11:18</ScanDate>
-<ScanEnd>2018-02-13 23:19:31</ScanEnd>
+<CVSSBaseScore>0</CVSSBaseScore>
+<ScanDate>2019-09-25 09:37:13</ScanDate>
+<ScanEnd>2019-09-25 09:48:40</ScanEnd>
 <StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
 <Confidence>High</Confidence>
 <DefenseBL>
-<DbId>BF45CDE9882A4E8589A91D0B547A4D7A</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
+<DbId>17AB0CC9D3234A1BB75D10A237C7132A</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
 <PcreRegex></PcreRegex>
 <ModSecurity></ModSecurity>
 <Snort></Snort>
 <Imperva></Imperva>
 </DefenseBL>
 <DefenseWL>
-<DbId>71F8C6C2C7944F0E958D51DD442E1AE4</DbId>
-<ParentDbId>0303FA34673146D0A1862838053DEF53</ParentDbId>
+<DbId>D42A27CE316347ECBD2D0A1DB7D340BC</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
 <PcreRegex></PcreRegex>
 <ModSecurity></ModSecurity>
 <Snort></Snort>
@@ -698,34 +99,389 @@ Server: Apache]]></AttackMatchedString>
 </DefenseWL>
 <AttackList>
 <Attack>
-<DbId>0A3E544D49AE414094ECDB5432C0D333</DbId>
+<DbId>EEBF83322373427F8D017943FC1F7DCC</DbId>
 <ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>FormResubmission</AttackId>
+<AttackId>BROWSERCACHEINFOCHECK00</AttackId>
 <AttackValue></AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/logout/login</AttackVulnUrl>
+<AttackVulnUrl>http://www.webscantest.com/css/style.css</AttackVulnUrl>
 <AttackPostParams></AttackPostParams>
-<AttackMatchedString>HTTP/1.1 200 OK</AttackMatchedString>
+<AttackMatchedString><![CDATA[HTTP/1.1 200 OK
+Connection: close
+Date: Wed, 25 Sep 2019 08:40:20 GMT
+Content-Length: 2706
+Content-Type: text/css
+Content-Encoding: gzip
+Last-Modified: Mon, 21 Dec 2015 23:35:46 GMT
+Accept-Ranges: bytes
+ETag: "277e-52770f2c5dc9f-gzip"
+Server: Apache/2.4.7 (Ubuntu)
+Vary: Accept-Encoding]]></AttackMatchedString>
 <AttackDescription></AttackDescription>
-<AttackConfigDescription>Form re-submissions from Browser Cache</AttackConfigDescription>
-<AttackUserNotes></AttackUserNotes>
-<OriginalValue></OriginalValue>
-<OriginalResponseCode>200</OriginalResponseCode>
-</Attack>
-<Attack>
-<DbId>4423BF7F9E324A9AB68991523A2670A6</DbId>
-<ParentDbId>00000000000000000000000000000000</ParentDbId>
-<AttackId>FormResubmission</AttackId>
-<AttackValue></AttackValue>
-<AttackVulnUrl>https://test.example.com/index.php/logout/login</AttackVulnUrl>
-<AttackPostParams></AttackPostParams>
-<AttackMatchedString>HTTP/1.1 200 OK</AttackMatchedString>
-<AttackDescription></AttackDescription>
-<AttackConfigDescription>Form re-submissions from Browser Cache</AttackConfigDescription>
+<AttackConfigDescription>Missing Browser Cache Directive</AttackConfigDescription>
 <AttackUserNotes></AttackUserNotes>
 <OriginalValue></OriginalValue>
 <OriginalResponseCode>200</OriginalResponseCode>
 </Attack>
 </AttackList>
 </Vuln>
-	</VulnList>
+<Vuln>
+<DbId>3AEC54BFA67949B4A83D226B17137B2C</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<ScanName>webscantest</ScanName>
+<WebSite>http://www.webscantest.com:80</WebSite>
+<WebSiteIP>69.164.223.208</WebSiteIP>
+<VulnType>Predictable Resource Location</VulnType>
+<VulnUrl>http://www.webscantest.com/robots.txt</VulnUrl>
+<NormalizedUrl>http://www.webscantest.com/robots.txt</NormalizedUrl>
+<MatchedString>Disallow: /osrun/*</MatchedString>
+<NormalizedPostParams/>
+<VulnParam/>
+<ParameterName>N/A</ParameterName>
+<HtmlEntityAttacked>URL</HtmlEntityAttacked>
+<ModuleId>D8741C7560B8431A9AE74E9B4FEB4F45</ModuleId>
+<AttackType>robots.txt Files</AttackType>
+<AttackScore>2-Low</AttackScore>
+<AttackValue>N/A</AttackValue>
+<OriginalValue>N/A</OriginalValue>
+<Method>N/A</Method>
+<RootCauseId>1363E7DCC2A85033C1C16E6C4984FD83</RootCauseId>
+<LuxorRootCauseId>BF60A34CED93FE8DAF0714D66E9E1E4D</LuxorRootCauseId>
+<FindingDbId>2B7C89C361C448808865037138448DB9</FindingDbId>
+<Description>
+<![CDATA[
+<p>A robots.txt file is present in the directory. The robots.txt file provides a list of directories that crawling engines are requested to ignore. There is no way to force the crawling engine to honor the robots.txt file. Depending on the content of the file, it may reveal administrator interfaces or alternate URLs that are supposed to be hidden from users.</p>
+]]>
+</Description>
+<Recommendation>
+<![CDATA[
+<p><ol> <li>Ensure that the robots.txt file does not divulge directories that are intended to be hidden from users.</li> <li>The security of sensitive directories should not rely on hiding their presence. Restrict access to sensitive directories (e.g. admin) by password and IP address or network location.</li> <li>Amend your deployment policy to include the removal of sensitive directories from robots.txt files.</li> </ol></p>
+]]>
+</Recommendation>
+<Page>http://www.webscantest.com/robots.txt</Page>
+<Url>http://www.webscantest.com/robots.txt</Url>
+<VulnParamType>unknown</VulnParamType>
+<CrawlTraffic>
+R0VUIC9zdGF0aWMvcHJvZHVjdDEuaHRtbCBIVFRQLzEuMQ0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xKSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNTkuMC4zMDcxLjExNSBTYWZhcmkvNTM3LjM2DQpIb3N0OiB3d3cud2Vic2NhbnRlc3QuY29tDQpSZWZlcmVyOiBodHRwOi8vd3d3LndlYnNjYW50ZXN0LmNvbS9zdGF0aWMvDQpDb29raWU6IFRFU1RfU0VTU0lPTklEPWpyZ2swanA4bW1kcGlldHNnazQ5YzJnbzc2OyBOQl9TUlZJRD1zcnYxNDA3MTc7IGFzcE5ldFNpbT0xOyBfX1JlcXVlc3RWZXJpZmljYXRpb25Ub2tlbj1wcmVkZWZpbmVkdG9rZW4NClgtQXBwU3BpZGVyRGVtbzogYjQxNTdiMWVkZjRhMWIzMThmYzBhMDYwMjVkMDI3NzcNCg0K
+</CrawlTraffic>
+<CrawlTrafficTemplate>
+R0VUIC9zdGF0aWMvcHJvZHVjdDEuaHRtbCBIVFRQLzEuMQ0KQWNjZXB0OiB0ZXh0L2h0bWwsYXBwbGljYXRpb24veGh0bWwreG1sLGFwcGxpY2F0aW9uL3htbDtxPTAuOSwqLyo7cT0wLjgNCkFjY2VwdC1FbmNvZGluZzogZ3ppcCwgZGVmbGF0ZQ0KQWNjZXB0LUxhbmd1YWdlOiBlbi1VUw0KVXNlci1BZ2VudDogTW96aWxsYS81LjAgKFdpbmRvd3MgTlQgNi4xKSBBcHBsZVdlYktpdC81MzcuMzYgKEtIVE1MLCBsaWtlIEdlY2tvKSBDaHJvbWUvNTkuMC4zMDcxLjExNSBTYWZhcmkvNTM3LjM2DQpIb3N0OiB3d3cud2Vic2NhbnRlc3QuY29tDQpSZWZlcmVyOiBodHRwOi8vd3d3LndlYnNjYW50ZXN0LmNvbS9zdGF0aWMvDQpDb29raWU6IFRFU1RfU0VTU0lPTklEPWpyZ2swanA4bW1kcGlldHNnazQ5YzJnbzc2OyBOQl9TUlZJRD1zcnYxNDA3MTc7IGFzcE5ldFNpbT0xOyBfX1JlcXVlc3RWZXJpZmljYXRpb25Ub2tlbj1wcmVkZWZpbmVkdG9rZW4NClgtQXBwU3BpZGVyRGVtbzogYjQxNTdiMWVkZjRhMWIzMThmYzBhMDYwMjVkMDI3NzcNCg0K
+</CrawlTrafficTemplate>
+<CrawlTrafficResponse>
+SFRUUC8xLjEgNDA0IE5vdA0KQ29ubmVjdGlvbjogY2xvc2UNCkRhdGU6IFdlZCwgMjUgU2VwIDIwMTkgMDg6NDI6MjQgR01UDQpDb250ZW50LUxlbmd0aDogMzAyDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbDsgY2hhcnNldD1pc28tODg1OS0xDQpTZXJ2ZXI6IEFwYWNoZS8yLjQuNyAoVWJ1bnR1KQ0KDQo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL0lFVEYvL0RURCBIVE1MIDIuMC8vRU4iPgo8aHRtbD48aGVhZD4KPHRpdGxlPjQwNCBOb3QgRm91bmQ8L3RpdGxlPgo8L2hlYWQ+PGJvZHk+CjxoMT5Ob3QgRm91bmQ8L2gxPgo8cD5UaGUgcmVxdWVzdGVkIFVSTCAvc3RhdGljL3Byb2R1Y3QxLmh0bWwgd2FzIG5vdCBmb3VuZCBvbiB0aGlzIHNlcnZlci48L3A+Cjxocj4KPGFkZHJlc3M+QXBhY2hlLzIuNC43IChVYnVudHUpIFNlcnZlciBhdCB3d3cud2Vic2NhbnRlc3QuY29tIFBvcnQgODA8L2FkZHJlc3M+CjwvYm9keT48L2h0bWw+Cg==
+</CrawlTrafficResponse>
+<AttackClass>Server Administrator</AttackClass>
+<CweId>530</CweId>
+<CAPEC>143</CAPEC>
+<DISSA_ASC>3620</DISSA_ASC>
+<OWASP2007>6</OWASP2007>
+<OWASP2010>6</OWASP2010>
+<OWASP2013>5</OWASP2013>
+<OWASP2017>6</OWASP2017>
+<GDPR2016>12200</GDPR2016>
+<OVAL>608</OVAL>
+<WASC>0</WASC>
+<CVSSBaseScore>5.5</CVSSBaseScore>
+<ScanDate>2019-09-25 09:37:13</ScanDate>
+<ScanEnd>2019-09-25 09:48:40</ScanEnd>
+<StatisticallyPrevalentOriginalResponseCode>404</StatisticallyPrevalentOriginalResponseCode>
+<Confidence>High</Confidence>
+<DefenseBL>
+<DbId>17AB0CC9D3234A1BB75D10A237C7132A</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
+<PcreRegex/>
+<ModSecurity/>
+<Snort/>
+<Imperva/>
+</DefenseBL>
+<DefenseWL>
+<DbId>D42A27CE316347ECBD2D0A1DB7D340BC</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
+<PcreRegex/>
+<ModSecurity/>
+<Snort/>
+<Imperva/>
+</DefenseWL>
+<AttackList>
+<Attack>
+<DbId>385B38C29B0946319BFE703BD00CFC15</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<AttackId>RF39</AttackId>
+<AttackValue>/robots.txt</AttackValue>
+<AttackVulnUrl>http://www.webscantest.com/robots.txt</AttackVulnUrl>
+<AttackPostParams/>
+<AttackMatchedString>Disallow: /osrun/*</AttackMatchedString>
+<AttackDescription/>
+<AttackConfigDescription>robots.txt Files</AttackConfigDescription>
+<AttackUserNotes/>
+<OriginalValue/>
+<OriginalResponseCode>404</OriginalResponseCode>
+<AttackRequestList>
+<AttackRequest>
+<DbId>4FD717EA7F1B440495529A574923B201</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<Request>
+R0VUIC9yb2JvdHMudHh0IEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoV2luZG93cyBOVCA2LjEpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS81OS4wLjMwNzEuMTE1IFNhZmFyaS81MzcuMzYNCkhvc3Q6IHd3dy53ZWJzY2FudGVzdC5jb20NCkNvb2tpZTogVEVTVF9TRVNTSU9OSUQ9anJnazBqcDhtbWRwaWV0c2drNDljMmdvNzY7IE5CX1NSVklEPXNydjE0MDcxNzsgYXNwTmV0U2ltPTE7IF9fUmVxdWVzdFZlcmlmaWNhdGlvblRva2VuPXByZWRlZmluZWR0b2tlbjsgZmlyc3RuYW1lPUpvaG4NClgtQXBwU3BpZGVyRGVtbzogMmUyNTllNTkxOWUxY2FhOGVlMTY2YmQwNTA2YzgwOWQNCg0K
+</Request>
+<Response>
+SFRUUC8xLjEgMjAwIE9LDQpDb25uZWN0aW9uOiBjbG9zZQ0KRGF0ZTogV2VkLCAyNSBTZXAgMjAxOSAwODo0Mzo0MCBHTVQNCkNvbnRlbnQtTGVuZ3RoOiA4NA0KQ29udGVudC1UeXBlOiB0ZXh0L3BsYWluDQpDb250ZW50LUVuY29kaW5nOiBnemlwDQpMYXN0LU1vZGlmaWVkOiBNb24sIDIxIERlYyAyMDE1IDIzOjM1OjQ2IEdNVA0KQWNjZXB0LVJhbmdlczogYnl0ZXMNCkVUYWc6ICI2NS01Mjc3MGYyYzZkNmEzLWd6aXAiDQpTZXJ2ZXI6IEFwYWNoZS8yLjQuNyAoVWJ1bnR1KQ0KVmFyeTogQWNjZXB0LUVuY29kaW5nDQoNCnVzZXItYWdlbnQ6ICoKRGlzYWxsb3c6IC9vc3J1bi8qCkRpc2FsbG93OiAvY2FsX2VuZGFyLyoKRGlzYWxsb3c6IC9jcmF3bHNuYWdzLyoKRGlzYWxsb3c6IC9zdGF0aWMvKgoK
+</Response>
+<Benign>0</Benign>
+</AttackRequest>
+</AttackRequestList>
+</Attack>
+</AttackList>
+</Vuln>
+<Vuln>
+<DbId>20FAEDAF92BA4A96BBABD2D2138B74E6</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<ScanName>webscantest</ScanName>
+<WebSite>http://www.webscantest.com:80</WebSite>
+<WebSiteIP>69.164.223.208</WebSiteIP>
+<VulnType>Content Type Charset Check</VulnType>
+<VulnUrl>
+http://www.webscantest.com/payment_analysis/checkdata.php
+</VulnUrl>
+<NormalizedUrl>
+http://www.webscantest.com/payment_analysis/checkdata.php
+</NormalizedUrl>
+<MatchedString>Content-Type: text/html</MatchedString>
+<NormalizedPostParams/>
+<VulnParam/>
+<ParameterName>N/A</ParameterName>
+<HtmlEntityAttacked>URL</HtmlEntityAttacked>
+<ModuleId>55D76EB20CE54C01856E43223232E3DD</ModuleId>
+<AttackType>Undefined charset attribute</AttackType>
+<AttackScore>2-Low</AttackScore>
+<AttackValue>N/A</AttackValue>
+<OriginalValue>N/A</OriginalValue>
+<Method>N/A</Method>
+<RootCauseId>41B9D866204B7CDB72C6EC4807187BAD</RootCauseId>
+<LuxorRootCauseId>263595549AF7190D39B522368ECA5D48</LuxorRootCauseId>
+<FindingDbId>E8CB35C86B4F49459118488BAA0E0B5D</FindingDbId>
+<Description>
+<![CDATA[
+<p>The encoding hasn't been declared either through the meta-tag, the byte-order-mark or the header, so the browser will make an attempt to detect the document's encoding. This exploit only works if the document reflects user input and the browser can be tricked into encoding the page as UTF-7 instead of UTF-8. Some of the browsers actually support UTF-7.</p>
+]]>
+</Description>
+<Recommendation>
+<![CDATA[
+<p>Always declare the encoding of your document. Use the HTTP header if you can. Always use an in-document declaration too.<br/> You can use @charset or HTTP headers to declare the encoding of your style sheet, but you only need to do so if your style sheet contains non-ASCII characters and, for some reason, you can't rely on the encoding of the HTML and the associated style sheet to be the same.<br/> Try to avoid using the byte-order mark in UTF-8, and ensure that your HTML code is saved in Unicode normalization form C (NFC).</p>
+]]>
+</Recommendation>
+<Page>
+http://www.webscantest.com/payment_analysis/checkdata.php
+</Page>
+<Url>
+http://www.webscantest.com/payment_analysis/checkdata.php
+</Url>
+<VulnParamType>unknown</VulnParamType>
+<CrawlTraffic>
+UE9TVCAvcGF5bWVudF9hbmFseXNpcy9jaGVja2RhdGEucGhwIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoV2luZG93cyBOVCA2LjEpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS81OS4wLjMwNzEuMTE1IFNhZmFyaS81MzcuMzYNCkhvc3Q6IHd3dy53ZWJzY2FudGVzdC5jb20NCkNvbnRlbnQtTGVuZ3RoOiAxMTUNClJlZmVyZXI6IGh0dHA6Ly93d3cud2Vic2NhbnRlc3QuY29tL3BheW1lbnRfYW5hbHlzaXMvY2hlY2tkYXRhLnBocA0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCkNvb2tpZTogVEVTVF9TRVNTSU9OSUQ9anJnazBqcDhtbWRwaWV0c2drNDljMmdvNzY7IE5CX1NSVklEPXNydjE0MDcwMDsgYXNwTmV0U2ltPTE7IF9fUmVxdWVzdFZlcmlmaWNhdGlvblRva2VuPXByZWRlZmluZWR0b2tlbjsgZmlyc3RuYW1lPUpvaG4NClgtQXBwU3BpZGVyRGVtbzogNjg2YTg1Zjk5ODg4MTc5MTA2NWVhYzhmN2U5YzRlNmINCg0KYW55dGhpbmc9ZGF0YSZudW1iZXI9MyZzdHJsZW4xPWRhdGEmc3RybGVuMj1kYXRhJnN0cmxlbjM9ZGF0YSZzdHJfb25seT1zdHJpbmcmbGV0dGVyc19vbmx5PXN0cmluZyZhbHBoYV9vbmx5PXN0cmluZw==
+</CrawlTraffic>
+<CrawlTrafficTemplate>
+UE9TVCAvcGF5bWVudF9hbmFseXNpcy9jaGVja2RhdGEucGhwIEhUVFAvMS4xDQpBY2NlcHQ6IHRleHQvaHRtbCxhcHBsaWNhdGlvbi94aHRtbCt4bWwsYXBwbGljYXRpb24veG1sO3E9MC45LCovKjtxPTAuOA0KQWNjZXB0LUVuY29kaW5nOiBnemlwLCBkZWZsYXRlDQpBY2NlcHQtTGFuZ3VhZ2U6IGVuLVVTDQpVc2VyLUFnZW50OiBNb3ppbGxhLzUuMCAoV2luZG93cyBOVCA2LjEpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS81OS4wLjMwNzEuMTE1IFNhZmFyaS81MzcuMzYNCkhvc3Q6IHd3dy53ZWJzY2FudGVzdC5jb20NCkNvbnRlbnQtTGVuZ3RoOiAxMTUNClJlZmVyZXI6IGh0dHA6Ly93d3cud2Vic2NhbnRlc3QuY29tL3BheW1lbnRfYW5hbHlzaXMvY2hlY2tkYXRhLnBocA0KQ29udGVudC1UeXBlOiBhcHBsaWNhdGlvbi94LXd3dy1mb3JtLXVybGVuY29kZWQNCkNvb2tpZTogVEVTVF9TRVNTSU9OSUQ9anJnazBqcDhtbWRwaWV0c2drNDljMmdvNzY7IE5CX1NSVklEPXNydjE0MDcwMDsgYXNwTmV0U2ltPTE7IF9fUmVxdWVzdFZlcmlmaWNhdGlvblRva2VuPXByZWRlZmluZWR0b2tlbjsgZmlyc3RuYW1lPUpvaG4NClgtQXBwU3BpZGVyRGVtbzogNjg2YTg1Zjk5ODg4MTc5MTA2NWVhYzhmN2U5YzRlNmINCg0KYW55dGhpbmc9ZGF0YSZudW1iZXI9MyZzdHJsZW4xPWRhdGEmc3RybGVuMj1kYXRhJnN0cmxlbjM9ZGF0YSZzdHJfb25seT1zdHJpbmcmbGV0dGVyc19vbmx5PXN0cmluZyZhbHBoYV9vbmx5PXN0cmluZw==
+</CrawlTrafficTemplate>
+<CrawlTrafficResponse>
+SFRUUC8xLjEgMjAwIE9LDQpDYWNoZS1Db250cm9sOiBuby1zdG9yZSwgbm8tY2FjaGUsIG11c3QtcmV2YWxpZGF0ZSwgcG9zdC1jaGVjaz0wLCBwcmUtY2hlY2s9MA0KQ29ubmVjdGlvbjogY2xvc2UNCkRhdGU6IFdlZCwgMjUgU2VwIDIwMTkgMDg6NDQ6MzMgR01UDQpQcmFnbWE6IG5vLWNhY2hlDQpDb250ZW50LUxlbmd0aDogNjE3DQpDb250ZW50LVR5cGU6IHRleHQvaHRtbA0KQ29udGVudC1FbmNvZGluZzogZ3ppcA0KRXhwaXJlczogVGh1LCAxOSBOb3YgMTk4MSAwODo1MjowMCBHTVQNClNlcnZlcjogQXBhY2hlLzIuNC43IChVYnVudHUpDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNClgtUG93ZXJlZC1CeTogUEhQLzUuNS45LTF1YnVudHU0LjI5DQpYX0FQUFNQSURFUkRFTU86IDk0MzM5OGNiYTI3MmM3OTBlNGY3MTk3ZTk2ZmY2ZWU3DQoNCgo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL1czQy8vRFREIEhUTUwgNC4wIFRyYW5zaXRpb25hbC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi9SRUMtaHRtbDQwL2xvb3NlLmR0ZCI+CjxodG1sPgoJPGhlYWQ+Cgk8bGluayB0eXBlPSJ0ZXh0L2NzcyIgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvY3NzL3N0eWxlLmNzcyIgLz4KCQk8dGl0bGU+PC90aXRsZT4KCgk8L2hlYWQ+Cgk8Ym9keSB0b3BtYXJnaW49IjAiIGxlZnRtYXJnaW49IjAiIG1hcmdpbmhlaWdodD0iMCIgbWFyZ2lud2lkdGg9IjAiIGJnY29sb3I9IiMwMDAwMDAiPgoJCTx0YWJsZSBjZWxsc3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiIGJvcmRlcj0iNCIgYWxpZ249ImNlbnRlciIgd2lkdGg9IjgxMCI+CgkJCTx0cj4KCQkJCTx0ZCBhbGlnbj0iY2VudGVyIiBzdHlsZT0iaGVpZ2h0OjUwcHgiPjxoMT48Zm9udCBjb2xvcj0iI0ZGRkZGRiI+V2ViIFNjYW5uZXIgVGVzdCBTaXRlPC9mb250PjwvaDE+PHRkPgoJCQk8L3RyPgoKCQkJCQkJPHRyPgoJCQkJCQkJPHRkIGFsaWduPSJyaWdodCIgc3R5bGU9ImhlaWdodDo1MHB4OyI+PGEgY2xhc3M9ImJ1dHRvbiIgaHJlZj0iL2xvZ2luLnBocCI+PGZvbnQgPkxvZ2luPC9mb250PjwvYT48L2gxPjwvdGQ+CgkJCQkJCTwvdHI+CgoJCQk8dHI+CgkJCQk8dGQgYmdjb2xvcj0iI0ZGRkZGRiIgc3R5bGU9InBhZGRpbmc6MTVweDsgdmVydGljYWwtYWxpZ246dG9wIj4KCQkJCQk8dGFibGUgY2VsbHNwYWNpbmc9IjAiIGNlbGxwYWRkaW5nPSIwIiBib3JkZXI9IjQiIGFsaWduPSJjZW50ZXIiIHdpZHRoPSI4MCUiPgpUaGFuayB5b3UgZm9yIHlvdXIgc3VibWlzc2lvbi4gWW91ciBvcmRlciB3aWxsIGJlIHByb2Nlc3NlZCBpbW1lZGlhdGVseS4KCQkJCQkJPHRyIHN0eWxlPSJoZWlnaHQ6MjAlOyB2ZXJ0aWNhbC1hbGlnbjp0b3AiPgoJCQkJCQkJPHRkIGFsaWduPSJjZW50ZXIiPjxmb250IGNvbG9yPSJncmV5IiBzaXplPSItMiI+VGhlIGZvcm0gYmFzZWQgY3JlZGVudGlhbHMgYXJlIHRlc3R1c2VyL3Rlc3RwYXNzLCBhbmQgdGhlIEhUVFAgQmFzaWMgY3JlZGVudGlhbHMgYXJlIGJ0ZXN0dXNlci9idGVzdHBhc3MuPC9mb250PgoJCQkJCQk8L3RyPgoJCQkJCQkKCQkJCQkJPHRyIHN0eWxlPSJoZWlnaHQ6MTAlOyB2ZXJ0aWNhbC1hbGlnbjp0b3AiPgoJCQkJCQkJPHRkIGFsaWduPSJjZW50ZXIiPjxhIGhyZWY9Ii9wcml2YWN5LnBocCI+PGZvbnQgY29sb3I9IiNGRkZGRkYiPlByaXZhY3kgUG9saWN5PC9mb250PjwvYT48L3RkPgoJCQkJCQk8L3RyPgoKCQkJCQk8L3RhYmxlPgoJCQkJPC90ZD4KCQkJPC90cj4KCQk8L3RhYmxlPgoJPC9ib2R5Pgo8L2h0bWw+
+</CrawlTrafficResponse>
+<AttackClass>Application Developer</AttackClass>
+<CweId>0</CweId>
+<CAPEC>0</CAPEC>
+<DISSA_ASC>0</DISSA_ASC>
+<OWASP2007>0</OWASP2007>
+<OWASP2010>0</OWASP2010>
+<OWASP2013>0</OWASP2013>
+<OWASP2017>0</OWASP2017>
+<GDPR2016>0</GDPR2016>
+<OVAL>0</OVAL>
+<WASC>0</WASC>
+<CVSSBaseScore>4</CVSSBaseScore>
+<ScanDate>2019-09-25 09:37:13</ScanDate>
+<ScanEnd>2019-09-25 09:48:40</ScanEnd>
+<StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
+<Confidence>High</Confidence>
+<DefenseBL>
+<DbId>17AB0CC9D3234A1BB75D10A237C7132A</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
+<PcreRegex/>
+<ModSecurity/>
+<Snort/>
+<Imperva/>
+</DefenseBL>
+<DefenseWL>
+<DbId>D42A27CE316347ECBD2D0A1DB7D340BC</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
+<PcreRegex/>
+<ModSecurity/>
+<Snort/>
+<Imperva/>
+</DefenseWL>
+<AttackList>
+<Attack>
+<DbId>559C231D2B6D4D53BB46BC6DFB396A8D</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<AttackId>HTTPHeadersCharset002</AttackId>
+<AttackValue/>
+<AttackVulnUrl>
+http://www.webscantest.com/payment_analysis/checkdata.php
+</AttackVulnUrl>
+<AttackPostParams/>
+<AttackMatchedString>Content-Type: text/html</AttackMatchedString>
+<AttackDescription>
+The Content-Type HTTP header is missing charset attribute
+</AttackDescription>
+<AttackConfigDescription>Undefined charset attribute</AttackConfigDescription>
+<AttackUserNotes/>
+<OriginalValue/>
+<OriginalResponseCode>200</OriginalResponseCode>
+</Attack>
+<Attack>
+<DbId>FF032300AE774266A0D9E93B561C28CF</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<AttackId>HTTPHeadersCharset002</AttackId>
+<AttackValue/>
+<AttackVulnUrl>
+http://www.webscantest.com/payment_analysis/checkdata.php
+</AttackVulnUrl>
+<AttackPostParams/>
+<AttackMatchedString>Content-Type: text/html</AttackMatchedString>
+<AttackDescription>
+The Content-Type HTTP header is missing charset attribute
+</AttackDescription>
+<AttackConfigDescription>Undefined charset attribute</AttackConfigDescription>
+<AttackUserNotes/>
+<OriginalValue/>
+<OriginalResponseCode>200</OriginalResponseCode>
+</Attack>
+</AttackList>
+</Vuln>
+<Vuln>
+<DbId>4FBC8B51BD634B22AB9A8DCEE8C7AFF3</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<ScanName>webscantest</ScanName>
+<WebSite>http://www.webscantest.com:80</WebSite>
+<WebSiteIP>69.164.223.208</WebSiteIP>
+<VulnType>Collecting Sensitive Personal Information</VulnType>
+<VulnUrl>http://www.webscantest.com/userprofile.php</VulnUrl>
+<NormalizedUrl>http://www.webscantest.com/userprofile.php</NormalizedUrl>
+<MatchedString>
+<![CDATA[ <input type="password" name="newpassword2" /> ]]>
+</MatchedString>
+<NormalizedPostParams/>
+<VulnParam/>
+<ParameterName>N/A</ParameterName>
+<HtmlEntityAttacked>URL</HtmlEntityAttacked>
+<ModuleId>243C315A46A14C92A2717A29A4290167</ModuleId>
+<AttackType>Customer Authentication Credential (Password)</AttackType>
+<AttackScore>1-Informational</AttackScore>
+<AttackValue>N/A</AttackValue>
+<OriginalValue>N/A</OriginalValue>
+<Method>N/A</Method>
+<RootCauseId>A139C7A501BA16685F78D243DDACE0D0</RootCauseId>
+<LuxorRootCauseId>BF4E91A177665C55A93D3DDAB69118CC</LuxorRootCauseId>
+<FindingDbId>A691709A641B4156A53DE0693513335D</FindingDbId>
+<Description>
+<![CDATA[ <p>Web form collects personal information.</p> ]]>
+</Description>
+<Recommendation>
+<![CDATA[
+<p>If the collection of personal information is not required and violates a policy directive, do not collect it.</p>
+]]>
+</Recommendation>
+<Page>http://www.webscantest.com/userprofile.php</Page>
+<Url>http://www.webscantest.com/userprofile.php</Url>
+<VulnParamType>unknown</VulnParamType>
+<CrawlTraffic>
+R0VUIC91c2VycHJvZmlsZS5waHAgSFRUUC8xLjENCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMSkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzU5LjAuMzA3MS4xMTUgU2FmYXJpLzUzNy4zNg0KSG9zdDogd3d3LndlYnNjYW50ZXN0LmNvbQ0KUmVmZXJlcjogaHR0cDovL3d3dy53ZWJzY2FudGVzdC5jb20vDQpDb29raWU6IFRFU1RfU0VTU0lPTklEPWpyZ2swanA4bW1kcGlldHNnazQ5YzJnbzc2OyBOQl9TUlZJRD1zcnYxNDA3MTcNClgtQXBwU3BpZGVyRGVtbzogOGZiZTA5OTZmZmJjZGViNmYwMzU3MmQ4Nzg2NGNhZjcNCg0K
+</CrawlTraffic>
+<CrawlTrafficTemplate>
+R0VUIC91c2VycHJvZmlsZS5waHAgSFRUUC8xLjENCkFjY2VwdDogdGV4dC9odG1sLGFwcGxpY2F0aW9uL3hodG1sK3htbCxhcHBsaWNhdGlvbi94bWw7cT0wLjksKi8qO3E9MC44DQpBY2NlcHQtRW5jb2Rpbmc6IGd6aXAsIGRlZmxhdGUNCkFjY2VwdC1MYW5ndWFnZTogZW4tVVMNClVzZXItQWdlbnQ6IE1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDYuMSkgQXBwbGVXZWJLaXQvNTM3LjM2IChLSFRNTCwgbGlrZSBHZWNrbykgQ2hyb21lLzU5LjAuMzA3MS4xMTUgU2FmYXJpLzUzNy4zNg0KSG9zdDogd3d3LndlYnNjYW50ZXN0LmNvbQ0KUmVmZXJlcjogaHR0cDovL3d3dy53ZWJzY2FudGVzdC5jb20vDQpDb29raWU6IFRFU1RfU0VTU0lPTklEPWpyZ2swanA4bW1kcGlldHNnazQ5YzJnbzc2OyBOQl9TUlZJRD1zcnYxNDA3MTcNClgtQXBwU3BpZGVyRGVtbzogOGZiZTA5OTZmZmJjZGViNmYwMzU3MmQ4Nzg2NGNhZjcNCg0K
+</CrawlTrafficTemplate>
+<CrawlTrafficResponse>
+SFRUUC8xLjEgMjAwIE9LDQpDYWNoZS1Db250cm9sOiBuby1zdG9yZSwgbm8tY2FjaGUsIG11c3QtcmV2YWxpZGF0ZSwgcG9zdC1jaGVjaz0wLCBwcmUtY2hlY2s9MA0KQ29ubmVjdGlvbjogY2xvc2UNCkRhdGU6IFdlZCwgMjUgU2VwIDIwMTkgMDg6NDE6MTUgR01UDQpQcmFnbWE6IG5vLWNhY2hlDQpDb250ZW50LUxlbmd0aDogNzcxDQpDb250ZW50LVR5cGU6IHRleHQvaHRtbA0KQ29udGVudC1FbmNvZGluZzogZ3ppcA0KRXhwaXJlczogVGh1LCAxOSBOb3YgMTk4MSAwODo1MjowMCBHTVQNClNlcnZlcjogQXBhY2hlLzIuNC43IChVYnVudHUpDQpWYXJ5OiBBY2NlcHQtRW5jb2RpbmcNClgtUG93ZXJlZC1CeTogUEhQLzUuNS45LTF1YnVudHU0LjI5DQpYX0FQUFNQSURFUkRFTU86IGI2NWIzMzQ3NDgxOWQwYjFlYzZhOTQ3YzRmMTYxNWM1DQoNCgo8IURPQ1RZUEUgSFRNTCBQVUJMSUMgIi0vL1czQy8vRFREIEhUTUwgNC4wIFRyYW5zaXRpb25hbC8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9UUi9SRUMtaHRtbDQwL2xvb3NlLmR0ZCI+CjxodG1sPgoJPGhlYWQ+Cgk8bGluayB0eXBlPSJ0ZXh0L2NzcyIgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSIvY3NzL3N0eWxlLmNzcyIgLz4KCQk8dGl0bGU+VXNlciBQcm9maWxlPC90aXRsZT4KCgk8L2hlYWQ+Cgk8Ym9keSB0b3BtYXJnaW49IjAiIGxlZnRtYXJnaW49IjAiIG1hcmdpbmhlaWdodD0iMCIgbWFyZ2lud2lkdGg9IjAiIGJnY29sb3I9IiMwMDAwMDAiPgoJCTx0YWJsZSBjZWxsc3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiIGJvcmRlcj0iNCIgYWxpZ249ImNlbnRlciIgd2lkdGg9IjgxMCI+CgkJCTx0cj4KCQkJCTx0ZCBhbGlnbj0iY2VudGVyIiBzdHlsZT0iaGVpZ2h0OjUwcHgiPjxoMT48Zm9udCBjb2xvcj0iI0ZGRkZGRiI+V2ViIFNjYW5uZXIgVGVzdCBTaXRlPC9mb250PjwvaDE+PHRkPgoJCQk8L3RyPgoKCQkJCQkJPHRyPgoJCQkJCQkJPHRkPgoJCQkJCQkJCTx0YWJsZSBjZWxsc3BhY2luZz0iMCIgY2VsbHBhZGRpbmc9IjAiIGJvcmRlcj0iMCIgYWxpZ249ImNlbnRlciIgd2lkdGg9IjEwMCUiIGhlaWdodD0iNTBweDsiPgoJCQkJCQkJCQk8dHI+CgkJCQkJCQkJCQk8dGQgYWxpZ249ImxlZnQiPjxhIGhyZWY9Ii91c2VycHJvZmlsZS5waHAiPjxmb250IGNvbG9yPSIjRkZGRkZGIj5XZWxjb21lIGJhY2sgQWRtaW4gS2luZzwvZm9udD48L2E+PC90ZD4KCQkJCQkJCQkJCTx0ZCBhbGlnbj0icmlnaHQiPjxhIGhyZWY9Ii9sb2dvdXQucGhwIj48Zm9udCBjb2xvcj0iI0ZGRkZGRiI+TG9nb3V0PC9mb250PjwvYT48L3RkPgoJCQkJCQkJCQk8L3RyPgoJCQkJCQkJCTwvdGFibGU+CgkJCQkJCQk8L3RkPgoJCQkJCQk8L3RyPgoKCQkJPHRyPgoJCQkJPHRkIGJnY29sb3I9IiNGRkZGRkYiIHN0eWxlPSJwYWRkaW5nOjE1cHg7IHZlcnRpY2FsLWFsaWduOnRvcCI+CgkJCQkJPHRhYmxlIGNlbGxzcGFjaW5nPSIwIiBjZWxscGFkZGluZz0iMCIgYm9yZGVyPSI0IiBhbGlnbj0iY2VudGVyIiB3aWR0aD0iODAlIj4KICAgIDxoMj5Vc2VyIFByb2ZpbGU8L2gyPgoJCVVzZXJuYW1lOiBhZG1pbjxici8+CgkJRmlyc3QgbmFtZTogQWRtaW48YnIvPgoJCUxhc3QgbmFtZTogS2luZzxici8+PGJyLz4KCiAgICA8aDM+Q2hhbmdlIFBhc3N3b3JkPC9oMz4KCQk8Zm9ybSBtZXRob2Q9IlBPU1QiIGFjdGlvbj0iY2hhbmdlcGFzc3dvcmQucGhwIj4KCQlDdXJyZW50IHBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9ImN1cnJlbnRwYXNzd29yZCIgLz48YnIvPgoJCU5ldyBwYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJuZXdwYXNzd29yZCIgLz48YnIvPgoJCUNvbmZpcm0gbmV3IHBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9Im5ld3Bhc3N3b3JkMiIgLz48YnIvPgoKCgkJCQkJCTx0ciBzdHlsZT0iaGVpZ2h0OjIwJTsgdmVydGljYWwtYWxpZ246dG9wIj4KCQkJCQkJCTx0ZCBhbGlnbj0iY2VudGVyIj48Zm9udCBjb2xvcj0iZ3JleSIgc2l6ZT0iLTIiPlRoZSBmb3JtIGJhc2VkIGNyZWRlbnRpYWxzIGFyZSB0ZXN0dXNlci90ZXN0cGFzcywgYW5kIHRoZSBIVFRQIEJhc2ljIGNyZWRlbnRpYWxzIGFyZSBidGVzdHVzZXIvYnRlc3RwYXNzLjwvZm9udD4KCQkJCQkJPC90cj4KCQkJCQkJCgkJCQkJCTx0ciBzdHlsZT0iaGVpZ2h0OjEwJTsgdmVydGljYWwtYWxpZ246dG9wIj4KCQkJCQkJCTx0ZCBhbGlnbj0iY2VudGVyIj48YSBocmVmPSIvcHJpdmFjeS5waHAiPjxmb250IGNvbG9yPSIjRkZGRkZGIj5Qcml2YWN5IFBvbGljeTwvZm9udD48L2E+PC90ZD4KCQkJCQkJPC90cj4KCgkJCQkJPC90YWJsZT4KCQkJCTwvdGQ+CgkJCTwvdHI+CgkJPC90YWJsZT4KCTwvYm9keT4KPC9odG1sPg==
+</CrawlTrafficResponse>
+<AttackClass>Privacy</AttackClass>
+<CweId>0</CweId>
+<CAPEC>0</CAPEC>
+<DISSA_ASC>0</DISSA_ASC>
+<OWASP2007>0</OWASP2007>
+<OWASP2010>0</OWASP2010>
+<OWASP2013>0</OWASP2013>
+<OWASP2017>0</OWASP2017>
+<GDPR2016>0</GDPR2016>
+<OVAL>0</OVAL>
+<WASC>0</WASC>
+<CVSSBaseScore>4</CVSSBaseScore>
+<ScanDate>2019-09-25 09:37:13</ScanDate>
+<ScanEnd>2019-09-25 09:48:40</ScanEnd>
+<StatisticallyPrevalentOriginalResponseCode>200</StatisticallyPrevalentOriginalResponseCode>
+<Confidence>High</Confidence>
+<DefenseBL>
+<DbId>17AB0CC9D3234A1BB75D10A237C7132A</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
+<PcreRegex/>
+<ModSecurity/>
+<Snort/>
+<Imperva/>
+</DefenseBL>
+<DefenseWL>
+<DbId>D42A27CE316347ECBD2D0A1DB7D340BC</DbId>
+<ParentDbId>D69F0AB10169499BB1BD326F2E3B601D</ParentDbId>
+<PcreRegex/>
+<ModSecurity/>
+<Snort/>
+<Imperva/>
+</DefenseWL>
+<AttackList>
+<Attack>
+<DbId>E681B36129B24750B7CF2AAAB4E87224</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<AttackId>PSI_18b</AttackId>
+<AttackValue/>
+<AttackVulnUrl>http://www.webscantest.com/userprofile.php</AttackVulnUrl>
+<AttackPostParams/>
+<AttackMatchedString>
+<![CDATA[ <input type="password" name="currentpassword" /> ]]>
+</AttackMatchedString>
+<AttackDescription/>
+<AttackConfigDescription>Customer Authentication Credential (Password)</AttackConfigDescription>
+<AttackUserNotes/>
+<OriginalValue/>
+<OriginalResponseCode>200</OriginalResponseCode>
+</Attack>
+<Attack>
+<DbId>147B9FA598134B9A9DA6487918AEA240</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<AttackId>PSI_18b</AttackId>
+<AttackValue/>
+<AttackVulnUrl>http://www.webscantest.com/userprofile.php</AttackVulnUrl>
+<AttackPostParams/>
+<AttackMatchedString>
+<![CDATA[ <input type="password" name="newpassword" /> ]]>
+</AttackMatchedString>
+<AttackDescription/>
+<AttackConfigDescription>Customer Authentication Credential (Password)</AttackConfigDescription>
+<AttackUserNotes/>
+<OriginalValue/>
+<OriginalResponseCode>200</OriginalResponseCode>
+</Attack>
+<Attack>
+<DbId>3CA2108FCB2843D3ABE80D3F1EBDFC06</DbId>
+<ParentDbId>00000000000000000000000000000000</ParentDbId>
+<AttackId>PSI_18b</AttackId>
+<AttackValue/>
+<AttackVulnUrl>http://www.webscantest.com/userprofile.php</AttackVulnUrl>
+<AttackPostParams/>
+<AttackMatchedString>
+<![CDATA[ <input type="password" name="newpassword2" /> ]]>
+</AttackMatchedString>
+<AttackDescription/>
+<AttackConfigDescription>Customer Authentication Credential (Password)</AttackConfigDescription>
+<AttackUserNotes/>
+<OriginalValue/>
+<OriginalResponseCode>200</OriginalResponseCode>
+</Attack>
+</AttackList>
+</Vuln>
+</VulnList>
 </VulnSummary>
