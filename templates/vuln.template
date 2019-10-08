@@ -31,14 +31,14 @@
 #[DISSA_ASC]#
 %vuln.dissa_asc%
 
-#[OWASP2007]#
-%vuln.owasp2007%
-
 #[OWASP2010]#
 %vuln.owasp2010%
 
 #[OWASP2013]#
 %vuln.owasp2013%
+
+#[OWASP2017]#
+%vuln.owasp2017%
 
 #[OVAL]#
 %vuln.oval%

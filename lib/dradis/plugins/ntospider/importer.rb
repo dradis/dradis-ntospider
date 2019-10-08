@@ -53,13 +53,16 @@ module Dradis::Plugins::NTOSpider
         )
         issue = content_service.create_issue text: issue_text, id: plugin_id
 
-        logger.info{ "\t\t => Creating new evidence" }
-        evidence_content = template_service.process_template(
-          template: 'evidence', data: vuln.xml
-        )
-        content_service.create_evidence(
-          issue: issue, node: host_node, content: evidence_content
-        )
+        # App Spider can provide multiple pieces of evidence for an issue.
+        xml_vuln.xpath('./AttackList/Attack').each do |attack_xml|
+          logger.info{ "\t\t => Creating new evidence" }
+          evidence_content = template_service.process_template(
+            template: 'evidence', data: attack_xml
+          )
+          content_service.create_evidence(
+            issue: issue, node: host_node, content: evidence_content
+          )
+        end
       end
 
       true
