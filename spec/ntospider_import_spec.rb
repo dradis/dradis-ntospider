@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Dradis::Plugins::Appspider::Importer do
+describe Dradis::Plugins::NTOSpider::Importer do
   before(:each) do
     # Stub template service
     templates_dir = File.expand_path('../../templates', __FILE__)
@@ -8,7 +8,7 @@ describe Dradis::Plugins::Appspider::Importer do
     .to receive(:default_templates_dir).and_return(templates_dir)
 
     # Init services
-    plugin = Dradis::Plugins::Appspider
+    plugin = Dradis::Plugins::NTOSpider
 
     @content_service = Dradis::Plugins::ContentService::Base.new(
       logger: Logger.new(STDOUT),
