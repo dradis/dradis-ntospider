@@ -1,6 +1,10 @@
-## Dradis Framework 3.15 (XXX, 2019) ##
+## Dradis Framework 3.16 (XXX, 2020) ##
 
 *  Expose additional fields for use in both Issue and Evidence.
+
+## Dradis Framework 3.15 (November, 2019) ##
+
+*   No changes.
 
 ## Dradis Framework 3.14 (August, 2019) ##
 
