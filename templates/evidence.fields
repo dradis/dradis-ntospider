@@ -1,4 +1,13 @@
-evidence.web_site
-evidence.vuln_url
-evidence.normalized_url
-evidence.vuln_param
+evidence.attack_config_description
+evidence.attack_description
+evidence.attack_id
+evidence.attack_matched_string
+evidence.attack_post_params
+evidence.attack_request
+evidence.attack_response
+evidence.attack_user_notes
+evidence.attack_value
+evidence.attack_vuln_url
+evidence.benign
+evidence.original_value
+evidence.original_response_code

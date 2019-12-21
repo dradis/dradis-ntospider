@@ -17,6 +17,11 @@ See the Dradis Framework's [README.md](https://github.com/dradis/dradisframework
 See the Dradis Framework's [CONTRIBUTING.md](https://github.com/dradis/dradisframework/blob/master/CONTRIBUTING.md)
 
 
+## Contributors
+
+ - Michael Gargiullo
+
+
 ## License
 
 Dradis Framework and all its components are released under [GNU General Public License version 2.0](http://www.gnu.org/licenses/old-licenses/gpl-2.0.html) as published by the Free Software Foundation and appearing in the file LICENSE included in the packaging of this file.
