@@ -5,3 +5,7 @@ Gemfile.lock
 
 # Gem artifacts
 /pkg/
+/spec/internal/
+
+# byebug
+.byebug_history
