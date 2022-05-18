@@ -2,7 +2,11 @@ module Dradis::Plugins::NTOSpider
   class FieldProcessor < Dradis::Plugins::Upload::FieldProcessor
 
     def post_initialize(args={})
-      @nto_object = ::NTOSpider::Vuln.new(data)
+      if data.name == 'Vuln'
+        @nto_object = ::NTOSpider::Vuln.new(data)
+      else
+        @nto_object = ::NTOSpider::Attack.new(data)
+      end
     end
 
     def value(args={})
