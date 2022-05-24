@@ -11,6 +11,10 @@ module Dradis::Plugins::NTOSpider
       "No vulnerabilities were detected in the uploaded file (/VulnSummary/VulnList/Vuln). "\
       "Ensure the file you uploaded comes from a NTOSpider report."
 
+    def self.templates
+      { evidence: 'evidence', issue: 'vuln' }
+    end
+
     # The framework will call this function if the user selects this plugin from
     # the dropdown list and uploads a file.
     # @returns true if the operation was successful, false otherwise
