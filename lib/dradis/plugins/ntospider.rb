@@ -7,5 +7,6 @@ end
 
 require 'dradis/plugins/ntospider/engine'
 require 'dradis/plugins/ntospider/field_processor'
+require 'dradis/plugins/ntospider/mapping'
 require 'dradis/plugins/ntospider/importer'
 require 'dradis/plugins/ntospider/version'
