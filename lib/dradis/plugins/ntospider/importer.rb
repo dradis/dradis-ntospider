@@ -52,16 +52,16 @@ module Dradis::Plugins::NTOSpider
 
         plugin_id = vuln.vuln_type
         logger.info{ "\t\t => Creating new issue (plugin_id: #{plugin_id})" }
-        issue_text = template_service.process_template(
-          template: 'vuln', data: vuln.xml
+        issue_text = mapping_service.apply_mapping(
+          source: 'vuln', data: vuln.xml
         )
         issue = content_service.create_issue text: issue_text, id: plugin_id
 
         # App Spider can provide multiple pieces of evidence for an issue.
         xml_vuln.xpath('./AttackList/Attack').each do |attack_xml|
           logger.info{ "\t\t => Creating new evidence" }
-          evidence_content = template_service.process_template(
-            template: 'evidence', data: attack_xml
+          evidence_content = mapping_service.apply_mapping(
+            source: 'evidence', data: attack_xml
           )
           content_service.create_evidence(
             issue: issue, node: host_node, content: evidence_content
