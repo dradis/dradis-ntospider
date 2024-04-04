@@ -26,5 +26,57 @@ module Dradis::Plugins::NTOSpider
         'OVAL' => '{{ ntospider[vuln.oval] }}'
       }
     }.freeze
+
+    SOURCE_FIELDS = {
+      evidence: [
+        'evidence.attack_config_description',
+        'evidence.attack_description',
+        'evidence.attack_id',
+        'evidence.attack_matched_string',
+        'evidence.attack_post_params',
+        'evidence.attack_request',
+        'evidence.attack_response',
+        'evidence.attack_user_notes',
+        'evidence.attack_value',
+        'evidence.attack_vuln_url',
+        'evidence.benign',
+        'evidence.original_value',
+        'evidence.original_response_code'
+      ],
+      vuln: [
+        'vuln.attack_class',
+        'vuln.attack_score',
+        'vuln.attack_type',
+        'vuln.attack_value',
+        'vuln.capec',
+        'vuln.confidence',
+        'vuln.cwe_id',
+        'vuln.description',
+        'vuln.dissa_asc',
+        'vuln.html_entity_attacked',
+        'vuln.imperva_bl',
+        'vuln.imperva_wl',
+        'vuln.mod_security_bl',
+        'vuln.mod_security_wl',
+        'vuln.normalized_url',
+        'vuln.oval',
+        'vuln.owasp2007',
+        'vuln.owasp2010',
+        'vuln.owasp2013',
+        'vuln.owasp2017',
+        'vuln.pcre_regex_bl',
+        'vuln.pcre_regex_wl',
+        'vuln.recommendation',
+        'vuln.scan_date',
+        'vuln.snort_bl',
+        'vuln.snort_wl',
+        'vuln.statistically_prevalent_original_response_code',
+        'vuln.vuln_method',
+        'vuln.vuln_param',
+        'vuln.vuln_type',
+        'vuln.vuln_url',
+        'vuln.wasc'
+      ]
+    }.freeze
   end
 end
